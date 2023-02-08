@@ -1,0 +1,9 @@
+{
+  "usingComponents": {},
+  "backgroundTextStyle": "light",
+  "onReachBottomDistance": 50,
+  "enablePullDownRefresh": false,
+  "navigationBarTitleText": "发布心愿",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#FFFFFF"
+}

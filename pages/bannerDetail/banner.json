@@ -1,0 +1,9 @@
+{
+  "usingComponents": {},
+  "backgroundTextStyle": "light",
+  "onReachBottomDistance": 50,
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#015CFA",
+  "navigationBarTitleText": "轮播图详情",
+  "navigationBarTextStyle": "white"
+}

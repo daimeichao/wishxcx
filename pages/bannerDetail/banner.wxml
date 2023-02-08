@@ -1,0 +1,9 @@
+<!--pages/bannerDetail/banner.wxml-->
+
+<!-- <view style="width: 96%;padding: 2%;margin-left:2%;min-height: 20VW;">
+  <image mode="widthFix" src="{{webroot}}{{bannerInfo.dz}}" style="width:100%"></image>
+</view>
+<view style="width: 96%;padding: 2%;margin-left:2%;min-height: 60VW;margin-top:4vw;">
+  <rich-text nodes="{{content}}"></rich-text>
+</view> -->
+<web-view src="{{url}}"></web-view>

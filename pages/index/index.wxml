@@ -1,0 +1,56 @@
+
+ <view class="mainView">
+   <view class="page-section page-section-spacing swiper">
+          <swiper indicator-dots="true" autoplay="true">
+            <block wx:for="{{bannerList}}">
+              <swiper-item bindtap="toPage" data-url="/pages/newBannerDetail/newBannerDetail?url={{item.link}}&type={{item.type}}&pid={{item.pid}}">
+                <!-- <view class="swiper-item {{item}}" ></view> -->
+                <image style="width:100%;height:350%"  src="https://hxjtg.fzjiading.com/wxy-api/img/wishbg.jpg"></image>
+              </swiper-item>
+            </block>
+          </swiper>
+      </view>
+
+      <view class="mainWish">
+        <view class="wishList">
+      
+          <view wx:for="{{list}}" style="" class="bgimage{{index % 6}}" bindtap="toPage" data-url="/pages/wishDetail/wishDetail?pid={{item.pid}}">
+            <view style="" class="wishName">{{item.wish_content}}  </view>
+
+            <view class="userView">
+              <view class="item1">
+                <image src="{{item.userIcon}}" style="height:5vh;width:5vh;vertical-align: middle;border-radius:50%"></image>      
+              </view>
+              <view class="item2">
+              {{item.wishusername}} 
+              </view>
+            </view>
+    
+    
+
+            
+          </view>
+     
+ 
+          <view style="width:100%;height:20vw"></view>
+        </view>
+      </view>
+
+
+      <view class="bottomView" style="margin-bottom: 1.5vw;">
+          <view style="position:absolute;top:3vw;left:15vw">
+          <image src="../../img/index-on.png" style="height:70rpx;width:70rpx"></image>
+          <view style="font-size:10px;text-align:center;width:70rpx;color:rgba(251, 98, 47, 1)">首页</view>
+          </view>
+
+          <view style="position:absolute;top:3vw;right:15vw;z-index:22" bindtap="toPageR" data-url="/pages/my/my/my">
+          <image src="../../img/my.png" style="height:70rpx;width:70rpx"></image>
+          <view style="font-size:10px;text-align:center;width:70rpx;color:rgba(166, 170, 178, 1)">我的</view>
+          </view>
+
+
+          <view style="position:absolute;width:100%;text-align:center;bottom:35%"> 
+            <image bindtap="toPageR" data-url="/pages/newWish/newWish" src="../../img/wish.png" style="height:150rpx;width:150rpx"></image>
+          </view>
+      </view>
+</view>

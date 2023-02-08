@@ -1,0 +1,6 @@
+<web-view wx:if="{{type === 1 || type === '1'}}" src="{{url}}"></web-view>
+
+<view wx:if="{{type === 0 || type === '0'}}" class="content" style="padding: 4vw;;">
+  <rich-text nodes="{{content}}"></rich-text>
+  <!-- <template is="wxParse" data="{{wxParseData:content.nodes}}" /> -->
+</view>

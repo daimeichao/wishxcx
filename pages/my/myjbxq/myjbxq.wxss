@@ -1,0 +1,140 @@
+.pagebox {
+  padding: 4vw;
+  background: rgba(245, 245, 245, 1);
+  min-height: 100vh;
+}
+
+.pagetopbox {
+  background: #fff;
+  padding: 4vw;
+  border-radius: 2vw;
+  font-size: 3.2vw;
+  position: relative;
+}
+
+.pagetopbox .title {
+  font-size: 4.2vw;
+}
+
+.pagetopbox image {
+  width: 100%;
+}
+
+.datebox {
+  height: 7vw;
+  line-height: 7vw;
+  vertical-align: text-bottom;
+}
+
+.jbbtn {
+  width: 20vw;
+  color: #fff;
+  height: 7vw;
+  line-height: 7vw;
+  border-radius: 100vw;
+  background-color: #ccc;
+  /* background-image: linear-gradient(rgba(234, 46, 55, 1), rgba(241, 105, 105, 1)); */
+}
+
+.rebbg{
+  background-image: linear-gradient(rgba(234, 46, 55, 1), rgba(241, 105, 105, 1)) !important;
+}
+
+.fjtit {
+  line-height: 5vw;
+  height: 5vw;
+  margin-bottom: 2vw;
+}
+
+.fjtit image {
+  vertical-align: middle;
+  margin-right: 1vw;
+  width: 4vw;
+}
+
+.fjbox {
+  color: rgba(64, 136, 184, 1);
+}
+
+.orderbox {
+  border-radius: 2vw;
+  font-size: 3.2vw;
+  position: relative;
+}
+
+.mapimg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 20vw;
+  border-radius: 2vw;
+}
+
+.mapbox {
+  width: 100%;
+  height: 20vw;
+  padding: 4vw 4vw 0;
+  font-size: 4vw;
+}
+
+.mdtit {
+  font-size: 4.2vw;
+  line-height: 12vw;
+  height: 12vw;
+  background-image: linear-gradient(rgba(131, 174, 247, 1), rgba(131, 174, 247, 0));
+  border-top-left-radius: 2vw;
+  border-top-right-radius: 2vw;
+}
+
+.mdtit image {
+  width: 2vw;
+  margin: 0 2vw;
+}
+
+.mdlistbox {
+  height: 12vw;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.mdnouser {
+  height: 20vw;
+  line-height: 20vw;
+  text-align: center;
+  font-size: 4vw;
+}
+
+.mditem {
+  padding-top: 2vw;
+  height: 8vw;
+  line-height: 8vw;
+}
+
+.mditem image {
+  vertical-align: middle;
+  width: 8vw;
+  margin-right: 2vw;
+}
+.ptb2 {
+  padding: 2vw 0;
+}
+
+.ptb1{
+  padding: 1vw 0;
+}
+
+.mtb2 {
+  margin: 2vw 0;
+}
+
+.ptb4 {
+  padding: 4vw 0;
+}
+
+.cb5 {
+  color: #b5b5b5;
+}
+
+.phone{
+  color: cornflowerblue;
+}

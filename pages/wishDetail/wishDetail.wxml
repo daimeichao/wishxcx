@@ -1,0 +1,87 @@
+<view class="mainView">
+  <view style="padding-left:5vw;padding-top:10vw;position:relative">
+
+  <image src="../../img/ywqd.png" style="height:150rpx;width:300rpx;"></image>
+  </view>
+
+
+  <view class="detailView">
+    <view class="viewItem"> 
+      <view class="itemLeft">
+      <image src="../../img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
+      <p style="margin-left:1vw;padding-top:10px">许愿人</p>
+      </view>
+      <view class="itemRight">
+      <p style="margin-left:1vw;padding-top:10px">{{detail.wishusername}}</p>
+      </view>
+
+   
+    </view>
+
+
+
+    <view style="height:1px;width:100%;background-color:rgba(245, 245, 245, 1)"></view>
+
+    <view class="viewItem"> 
+      <view class="itemLeft" style="vertical-align:top">
+      <image src="../../img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
+      <p style="margin-left:1vw;">许愿内容</p>
+      </view>
+      <view class="itemRight" style="text-align:right;vertical-align:top;line-height:6vw;padding-top:3vw;">
+      <p style="margin-left:1vw;word-wrap:break-word;word-break:break-all;overflow: hidden;">{{detail.wish_content}}</p>
+      </view>
+
+
+
+      
+   
+    </view>
+    <view style="height:1px;width:100%;background-color:rgba(245, 245, 245, 1)"></view>
+
+
+    <view class="viewItem"> 
+      <view class="itemLeft" style="vertical-align:top">
+      <image src="../../img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
+      <p style="margin-left:1vw;">许原地点</p>
+      </view>
+      <view class="itemRight" style="text-align:right;vertical-align:top;line-height:6vw;padding-top:3vw;">
+      <p style="margin-left:1vw;word-wrap:break-word;word-break:break-all;overflow: hidden;">{{detail.adder}}</p>
+      </view>
+
+   
+    </view>
+    <view style="height:1px;width:100%;background-color:rgba(245, 245, 245, 1)"></view>
+
+    <!-- <view class="viewItem"> 
+      <view class="itemLeft">
+      <image src="../../img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
+      <p style="margin-left:1vw;padding-top:10px">许愿金额</p>
+      </view>
+      <view class="itemRight">
+      <p style="margin-left:1vw;padding-top:10px">{{detail.wishusername}}</p>
+      </view>
+
+   
+    </view>
+    <view style="height:1px;width:100%;background-color:rgba(245, 245, 245, 1)"></view> -->
+
+
+    <view class="viewItem"> 
+      <view class="itemLeft">
+      <image src="../../img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
+      <p style="margin-left:1vw;padding-top:10px">许愿时间</p>
+      </view>
+      <view class="itemRight">
+      <p style="margin-left:1vw;padding-top:10px">{{detail.wish_time}}</p>
+      </view>
+
+   
+    </view>
+  </view>
+
+
+  <view class="bottomView">
+    <view class="btnView" bindtap="toPage" data-url="/pages/realizationWish/realizationWish?pid={{detail.pid}}">我要实现</view>
+  </view>
+
+</view>

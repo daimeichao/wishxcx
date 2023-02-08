@@ -1,0 +1,9 @@
+{
+  "usingComponents": {},
+  "backgroundTextStyle": "light",
+  "onReachBottomDistance": 50,
+  "enablePullDownRefresh": false,
+  "navigationBarTitleText": "详情",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#FFFFFF"
+}

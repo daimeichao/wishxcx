@@ -1,0 +1,82 @@
+/* pages/my/mynews/mynews.wxss */
+page {
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+}
+.bt {
+  width: 84vw;
+  float: left;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 4vw;
+  color: rgba(0, 0, 0, 1);
+  margin-left: 1vw;
+}
+.tp{
+  width: 13vw;
+  float: left;
+  margin: 1.5vw 0 0 1.5vw;
+}
+.nr{
+  float: left;
+  margin-left: 1.5vw;
+  width: 85vw;
+  height: 10vw;
+  font-size: 16px;
+  font-weight: 500;
+}
+.sj{
+  float: left;
+  margin-left: 1.5vw;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 2.7vw;
+}
+.yjbrs {
+  margin-right: 1.5vw;
+  margin-top: 1.5vw;
+  float: right;
+  width: 7.1vw;
+  height: 7vw;
+  opacity: 1;
+  background-color: rgba(204, 204, 204, 1);
+  border: 1px solid rgba(179, 177, 177, 1);
+  border-radius: 100%;
+  overflow: hidden;
+}
+.yjbrs .jbrimg {
+  width: 100%;
+}
+
+.xm{
+  float: right;
+  margin-right: 1.5vw;
+  margin-top: 2.5vw;
+}
+#a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* 状态一: 未被访问过的链接 */
+#a:link {
+  text-decoration: none;
+  color: #000;
+}
+
+/* 状态二: 已经访问过的链接 */
+#a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+/* 状态三: 鼠标划过(停留)的链接(默认红色) */
+#a:hover {
+  text-decoration: none;
+  color: #000;
+}
+/* 状态四: 被点击的链接 */
+#a:active {
+  text-decoration: none;
+  color: #000;
+}

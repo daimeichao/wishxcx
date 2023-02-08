@@ -1,0 +1,67 @@
+/* pages/my/myzhuce/myzhuce.wxss */
+
+.link-top {
+  width: 85vw;
+  height: 1px;
+  margin-top: 2vw;
+  border-top: solid rgba(240, 240, 240, 1) 1px;
+}
+.zhuce0{
+  background: rgba(235, 236, 237, 1);
+
+  width: 100vw;
+}
+.zhuce1{
+  background: rgba(235, 236, 237, 1);
+  height: 360vw;
+  width: 100vw;
+}
+.zhucebj0{
+  float: left;
+  width: 92vw;
+  height: 320vw;
+}
+.zhucebj1{
+  float: left;
+  width: 92vw;
+}
+
+.zhucebg0{
+  float: left;
+  width: 92vw;
+  position: absolute;
+  top: 4vw;
+  left: 4vw;
+  z-index: 999;
+  /* background-color: aqua; */
+}
+.zhucebg1{
+  float: left;
+  width: 92vw;
+  /* margin-top: -347vw; */
+  position: absolute;
+  top: 0;
+  left: 4vw;
+  z-index: 999;
+}
+.h35{
+  margin-left:4vw;float: left;
+}
+.h42{
+  margin-left:4vw;margin-top: -42vw;float: left;
+}
+.zc0{
+  margin-top: 12vw;float: right;
+}
+
+.zc1{
+  margin-top: 5vw;float: right;
+}
+.topnav{
+  position:relative;
+}
+.topchild{
+  margin: 0 auto;
+  text-align: center;
+  margin-top: -120px;
+}

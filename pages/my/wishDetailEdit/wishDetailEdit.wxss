@@ -1,0 +1,45 @@
+
+.mainView{
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 5vw;
+  border-top-left-radius: 5vw;
+}
+
+.topView{
+  width: 90%;
+  margin-left: 5%;
+  display: table;
+  
+}
+
+.topIcon{
+  display: table-cell;
+  width: 5%;
+  vertical-align: middle;
+  padding-right: 1vw;
+}
+.topName{
+  display: table-cell;
+  width: 75%;
+  vertical-align: middle;
+}
+
+.topBtn{
+ 
+  display: table-cell;
+  width: 20%;
+  vertical-align: middle;
+  text-align: right;
+}
+
+.bottomView{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  height: 10vh;
+  background-color:#FFF;
+  background-image: url(https://hxjtg.fzjiading.com/wxy-api/img/navnew.png);
+  background-position: center center;
+  background-size: cover;
+}

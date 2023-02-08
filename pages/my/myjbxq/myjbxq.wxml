@@ -1,0 +1,70 @@
+<view class="pagebox">
+  <!-- 头部 -->
+  <view class="pagetopbox">
+    <view class="title">{{title}}</view>
+    <view class="cb5 ptb1">{{tag}}</view>
+    <view class=" ptb1" style="font-size: 3vw;">联系人: {{lxr}} <image src="../../../img/home/phone.png" mode="widthFix" style="width:4vw;vertical-align: middle;" catchtap="callPhone"></image></view>
+    <!-- <view class="cb5 ptb1 phone" catchtap="callPhone" data-phone="{{lxfs}}">
+    {{lxfs}}
+        
+    </view> -->
+    <image src="../../../img/culture_activity.jpg" mode="widthFix"></image>
+    <view class="ptb2">
+      <rich-text nodes="{{txt}}"></rich-text> 
+    </view>
+    <view class="clearfloat ptb2">
+      <view class="fll w50 cb5 datebox">{{date}}</view>
+      <!-- <view class='flr jbbtn tc {{!hasJieBang?"rebbg":""}}' bindtap="wyjbOne" data-xmid="{{pid}}" wx:if="{{!hasJieBang}}">我要揭榜</view>
+      <view class="flr jbbtn tc" wx:if="{{hasJieBang}}">我要揭榜</view> -->
+    </view>
+  </view>
+  <!-- 附件 -->
+  <view class="pagetopbox mtb2">
+    <view class="fjtit">
+      <image src="../../../img/fj.png" mode="widthFix"></image>
+      附件
+    </view>
+<!-- {{fjList}} -->
+    <view wx:for="{{fjList}}" wx:key="key">
+      <view class="fjbox" bindtap="downLoadFun" data-url="{{item.fjdz}}">{{item.fjmc}}</view>
+      <!-- <a href="https://img.js.design/assets/smartFill/img307164da746310.jpeg" class="fjbox">{{item.fjmc}}</a> -->
+    </view>
+    <view wx:if="{{fjList.length==0}}">
+      <view>{{filename}}</view>
+    </view>
+  </view>
+
+  <!-- 导航区域 -->
+  <!-- <view class="orderbox mtb2" style="height: 20vw;">
+    <image src="../../img/mt.png" class="mapimg"></image>
+    <view class="mapbox lt0 clearfloat poa" style="z-index: 9;">
+      <view class="w70">{{add}}</view>
+      <view class="w20 tc poa" style="right: 0;top: 2vw;">
+        <image src="../../img/mt2.png" mode="widthFix" style="width: 60%;"></image>
+        <view class="cb5" style="font-size: 3.2vw;">导航</view>
+      </view>
+    </view>
+  </view> -->
+  <!-- 名单区域 -->
+  <view class="orderbox" style="background: #fff;margin-bottom: 6vw;">
+    <view class="mdtit tc">
+      <image src="../../../img/h2.png" mode="widthFix"></image>
+      <text>揭榜名单</text>
+      <image src="../../../img/h2.png" mode="widthFix"></image>
+    </view>
+    <!-- 有揭榜人 -->
+    <view style="padding:0 2vw 5vw;min-height: 45vw;margin-bottom: 2vw;" class="ovh" wx:if="{{hasuser}}">
+      <!-- <view class="mdlistbox clearfloat" wx:for="{{usertableinfo}}" wx:key="key" wx:for-item="rowData"> -->
+      <view class="fll w33 mditem" wx:for="{{usertableinfo}}" wx:key="key">
+        <image src="../../../img/jbmytx.png" mode="widthFix" wx:if="{{item.tx === undefined || item.tx === null || item.tx===''}}"></image>
+        <image src="{{item.tx}}" mode="widthFix" wx:else></image>
+        <text>{{item.xm}}</text>
+        <!-- </view> -->
+      </view>
+    </view>
+    <!-- 无揭榜人 -->
+    <view class="mdnouser" wx:if="{{!hasuser}}" style="min-height: 45vw;">
+      暂无揭榜人
+    </view>
+  </view>
+</view>

@@ -1,0 +1,79 @@
+<view class="mainView">
+
+  <view class="topView"> 
+    <view class="topIcon">
+        <image src="{{userInfo.portrait}}" style="height:10vw;width:10vw;border-radius:50%"></image>
+    </view>
+    <view class="topName">
+      <input bindinput="getParam" value="{{userName}}" data-key="userName" style=""  auto-focus placeholder="请输入姓名"/>
+    </view>
+    <view class="topBtn">
+        <view bindtap="addWish" style="background-color:rgba(251, 97, 46, 1);color:#FFF;padding:1vw;text-align:center;border-radius:5vw;width:20vw">
+        <!-- <image src="../../img/add.png" style="height:4vw;width:4vw; vertical-align: middle;font-size:14px"></image> -->
+        发布
+        </view>
+    </view>
+
+  </view>
+
+  <view class="topView" style="margin-top:2vw"> 
+    <view class="topIcon">
+        <image src="../../img/local.jpg" style="height:10vw;width:10vw;border-radius:50%"></image>
+    </view>
+    <view class="topName">
+      <input  data-key="adder"  bindinput="getParam"  style=""  auto-focus placeholder="请填许愿地址"/>
+    </view>
+ 
+
+  </view>
+
+
+
+
+
+  <!-- <view style="width:90%;margin-left:5%;display:table;margin-top:2vw">
+      <view style="display:table-cell;width:45%">
+        许愿地址
+      </view>
+      <view style="display:table-cell;width:45%">
+        <input data-key="adder"  bindinput="getParam"  style="padding-top:2.5vw;text-align:right"  auto-focus placeholder="请填许愿地址"/>
+      </view>
+  </view> -->
+
+
+  <!-- <view style="width:90%;margin-left:5%;display:table;margin-top:2vw">
+      <view style="display:table-cell;width:45%">
+        许愿金额
+      </view>
+      <view style="display:table-cell;width:45%">
+        <input data-key="money"  bindinput="getParam"  style="padding-top:2.5vw;text-align:right"  auto-focus placeholder="请填许愿金额"/>
+      </view>
+  </view> -->
+
+
+
+
+
+  <view style="width:90%;margin-left:5%;margin-top:4vw">
+    <textarea style="" bindinput="getParam" value="{{content}}" data-key="content" placeholder="请输入你的心愿"
+     />
+  </view>
+
+
+  <view class="bottomView">
+      <view style="z-index:33;position:absolute;top:3vw;left:15vw" catchtap="toPageR" data-url="/pages/index/index">
+      <image src="../../img/index.png" style="height:70rpx;width:70rpx"></image>
+      <view style="font-size:10px;text-align:center;width:70rpx;color:rgba(166, 170, 178, 1)">首页</view>
+      </view>
+
+      <view style="z-index:33;position:absolute;top:3vw;right:15vw"  bindtap="toPageR" data-url="/pages/my/my/my">
+      <image src="../../img/my.png" style="height:70rpx;width:70rpx"></image>
+      <view style="font-size:10px;text-align:center;width:70rpx;color:rgba(166, 170, 178, 1)">我的</view>
+      </view>
+
+
+      <view style="position:absolute;width:100%;text-align:center;bottom:35%"> 
+        <image  src="../../img/wish.png" style="height:150rpx;width:150rpx"></image>
+      </view>
+  </view>
+</view>

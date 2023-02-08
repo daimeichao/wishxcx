@@ -1,0 +1,146 @@
+<view class="mainView">
+  <view style="padding-left:5vw;padding-top:10vw;position:relative">
+
+  <image src="../../../img/sxyw.png" style="height:150rpx;width:300rpx;"></image>
+  </view>
+
+
+  <view class="detailView">
+    <view class="viewItem"> 
+      <view class="itemLeft">
+      <image src="../../../img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
+      <p style="margin-left:1vw;padding-top:10px">许愿人</p>
+      </view>
+      <view class="itemRight">
+      <p style="margin-left:1vw;padding-top:10px">{{detail.wishusername}}</p>
+      </view>
+
+   
+    </view>
+
+
+
+    <view style="height:1px;width:100%;background-color:rgba(245, 245, 245, 1)"></view>
+
+    <view class="viewItem"> 
+      <view class="itemLeft" style="vertical-align:top">
+      <image src="../../../img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
+      <p style="margin-left:1vw;">许愿内容</p>
+      </view>
+      <view class="itemRight" style="text-align:right;vertical-align:top;line-height:6vw;padding-top:3vw;">
+      <p style="margin-left:1vw;word-wrap:break-word;word-break:break-all;overflow: hidden;">{{detail.wishContent}}</p>
+      </view>
+
+
+
+      
+   
+    </view>
+    <view style="height:1px;width:100%;background-color:rgba(245, 245, 245, 1)"></view>
+
+
+    <view class="viewItem"> 
+      <view class="itemLeft" style="vertical-align:top">
+      <image src="../../../img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
+      <p style="margin-left:1vw;">许愿地点</p>
+      </view>
+      <view class="itemRight" style="text-align:right;vertical-align:top;line-height:6vw;padding-top:3vw;">
+      <p style="margin-left:1vw;word-wrap:break-word;word-break:break-all;overflow: hidden;">{{detail.adder}}</p>
+      </view>
+
+   
+    </view>
+    <view class="viewItem" wx:if="{{isshow}}"> 
+      <view class="itemLeft">
+      <image src="../../../img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
+      <p style="margin-left:1vw;padding-top:10px">未通过原因</p>
+      </view>
+      <view class="itemRight">
+      <p style="margin-left:1vw;padding-top:10px">{{detail.claimantAuditRemark}}</p>
+      </view>
+
+   
+    </view>
+    <view style="height:1px;width:100%;background-color:rgba(245, 245, 245, 1)"></view>
+
+    <!-- <view class="viewItem"> 
+      <view class="itemLeft">
+      <image src="../../img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
+      <p style="margin-left:1vw;padding-top:10px">许愿金额</p>
+      </view>
+      <view class="itemRight">
+      <p style="margin-left:1vw;padding-top:10px">{{detail.wishusername}}</p>
+      </view>
+
+   
+    </view>
+    <view style="height:1px;width:100%;background-color:rgba(245, 245, 245, 1)"></view> -->
+
+
+    <view class="viewItem"> 
+      <view class="itemLeft">
+      <image src="../../../img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
+      <p style="margin-left:1vw;padding-top:10px">许愿时间</p>
+      </view>
+      <view class="itemRight">
+      <p style="margin-left:1vw;padding-top:10px">{{detail.wishTime}}</p>
+      </view>
+
+   
+    </view>
+    <view style="height:1px;width:100%;background-color:rgba(245, 245, 245, 1)"></view>
+    <view class="viewItem"> 
+      <view class="itemLeft">
+      <image src="../../../img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
+      <p style="margin-left:1vw;padding-top:10px">实现人</p>
+      </view>
+      <view class="itemRight">
+      <p style="margin-left:1vw;padding-top:10px">{{detail.claimant}}</p>
+      </view>
+
+   
+    </view>
+    <view style="height:1px;width:100%;background-color:rgba(245, 245, 245, 1)"></view>
+
+    <view class="viewItem"> 
+      <view class="itemLeft">
+      <image src="../../../img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
+      <p style="margin-left:1vw;padding-top:10px">认领时间</p>
+      </view>
+      <view class="itemRight">
+      <p style="margin-left:1vw;padding-top:10px">{{detail.sxtime}}</p>
+      </view>
+
+   
+    </view>
+    <view style="height:1px;width:100%;background-color:rgba(245, 245, 245, 1)"></view>
+
+
+    <view class="viewItem"> 
+      <view class="itemLeft">
+      <image src="../../../img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
+      <p style="margin-left:1vw;padding-top:10px">单号</p>
+      </view>
+      <view class="itemRight">
+      <p style="margin-left:1vw;padding-top:10px">{{detail.expressage}}</p>
+      </view>
+
+   
+    </view>
+    <view style="height:1px;width:100%;background-color:rgba(245, 245, 245, 1)"></view>
+    <view class="viewItem"> 
+      <view class="itemLeft">
+      <image src="/img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
+      <p style="margin-left:1vw;padding-top:10px">附件</p>
+      </view>
+ 
+    </view>
+    <view class="viewItem"> 
+    <view class="itemRight1" style="margin-bottom: 10vw;" >
+      <image style="margin-left:1vw;padding-top:10px;width:25vw;height: 25vw;"  bindtap="imgview" mode="widthFix" wx:for="{{pic}}"  src="{{item}}"></image>
+      </view>
+    </view>
+  </view>
+
+
+</view>

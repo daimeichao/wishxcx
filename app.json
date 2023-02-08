@@ -1,0 +1,44 @@
+{
+  "usingComponents": {
+    "van-uploader": "/miniprogram_npm/@vant/weapp/uploader/index"
+  },
+  "pages": [
+    "pages/loading/loading",
+    "pages/newWish/newWish",
+    "pages/index/index",
+    "pages/realizationWish/realizationWish",
+    "pages/wishDetail/wishDetail",
+    "pages/home/home/home",
+    "pages/newBannerDetail/newBannerDetail",
+    "pages/my/my/my",
+    "pages/my/mywish/mywish",
+    "pages/my/myzhuce/myzhuce",
+    "pages/my/myfulfill/myfulfill",
+    "pages/my/wishDetail/wishDetail",
+    "pages/my/wishDetailEdit/wishDetailEdit",
+    "pages/my/wishfulfillDetail/wishfulfillDetail",
+    "pages/my/wishmyfuil/wishmyfuil",
+    "pages/zyzsq/zyzsq",
+    "pages/my/myjf/jfxq",
+    "pages/my/zyzsqinfo/sqinfo",
+    "pages/jfphb/jfphb",
+    "pages/goods/goods",
+    "pages/mygoods/mygoods"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "onReachBottomDistance": 50,
+    "enablePullDownRefresh": false,
+    "navigationBarBackgroundColor": "#ffff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位"
+    }
+  },
+  "sitemapLocation": "sitemap.json",
+  "plugins": {},
+  "requiredPrivateInfos": []
+}

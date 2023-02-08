@@ -1,0 +1,38 @@
+<view class="zhuce0">
+  <view style="float: left;">
+    <view>
+      <image src="https://hxjtg.fzjiading.com/wxy-api/img/my-bj.png" style="width: 100vw;z-index: 1;" mode="widthFix"></image>
+      
+    </view>
+  </view>
+  <view class="h35">
+    <!-- <image src="/img/132.png" class="zhucebj1"></image> -->
+    <view class="zhucebg0">
+     
+      <image  src="{{userdata.portrait!=='' ? userdata.portrait : 'https://hxjtg.fzjiading.com/wxy-api/img/def.jpeg'}}" style="border-radius: 50%;float: left;width: 24vw;margin-left:35vw;margin-top: 10vw;" mode="widthFix"></image>
+      <view style="float: right;padding-left: 4vw;padding-right: 4vw;width: 92vw;font-size: 16px;font-weight: 400;margin-top:21vw;">
+        <view style="margin-top: 4vw;" >
+          <view style="color: red;float: left;width: 3vw;">*</view>姓名
+          <input data-gater="userSetInfo.xm" maxlength="10" bindinput="inputFrame" value="{{userdata.name}}" type="text" style="float: right; text-align: right;width: 52vw;color: rgba(140, 137, 137, 1);" type="text"></input>
+          <view class="link-top"></view>
+        </view>
+        <view style="margin-top: 4vw; " wx:if="{{!wyfb}}">
+          <view style="color: red;float: left;width: 3vw;"></view> 微信昵称
+          <p data-gater="userSetInfo.phone" maxlength="11"  bindblur="sendPhone" bindinput="inputFrame"  type="text" style="float: right; text-align: right;width: 52vw;color: rgba(140, 137, 137, 1);">{{userdata.nick}}</p>
+          <view class="link-top"></view>
+        </view>
+        <view style="margin-top: 4vw; " wx:if="{{!wyfb}}">
+          <view style="color: red;float: left;width: 3vw;"></view> 联系方式
+          <p data-gater="userSetInfo.phone" maxlength="11"  bindblur="sendPhone" bindinput="inputFrame"  type="number" style="float: right; text-align: right;width: 52vw;color: rgba(140, 137, 137, 1);">{{userdata.phone}}</p>
+          <view class="link-top"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view>
+      <button style="font-size: 16px;font-weight: 400;background-color:rgba(251, 97, 46, 1);width: 92vw;line-height: 10vw;margin-right: 4vw;color: white;position: fixed;bottom: 4vw;left: 4vw;z-index: 9999;" bindtap="edituser">保存</button>
+    </view>
+
+  <!-- 加载中 -->
+  <loading hidden="{{hidden}}">加载中...</loading>
+</view>

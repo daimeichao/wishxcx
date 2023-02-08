@@ -1,0 +1,10 @@
+{
+  "usingComponents": {},
+  "backgroundTextStyle": "light",
+  "onReachBottomDistance": 50,
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTitleText": "个人信息",
+  "navigationBarTextStyle": "black",
+  "backgroundColor": "#FFFFFF"
+}

@@ -1,0 +1,60 @@
+<view class="mh100vh" >
+<view style="height: 50vw;">
+  <!-- <view style="background-color: rgba(1, 92, 250, 1);width: 100vw;z-index: 1">
+    <image src="../../../img/jbxib1.png" style="width: 6vw;margin-left: 5vw;margin-top: 3vh;" mode="widthFix"></image> 
+    <view  style="margin-left: 13vw;margin-top: -7vw;font-size: 18px;color:rgba(255, 255, 255, 1);">我的</view>   
+
+  </view> -->
+  <view class="topnav">
+    <image src="https://hxjtg.fzjiading.com/wxy-api/img/mywishbj.png" style="width: 100vw;z-index: 1;height: 30vw;" mode="widthFix"></image>
+    <view style="margin-top: -40vw;margin-left: 5vw;">
+      <image src="/img/mywish-list.png" style="width: 40vw;z-index: 2;" mode="widthFix"></image>
+      </view>
+    </view>
+</view>
+<view style="width: 100vw;height: 100%;text-align:center;margin-top: 50vw;" wx:if="{{length == '0'}}"><p>暂无数据</p></view>
+ <view style="padding-left:4vw;padding-right:4vw;">
+ <!-- 菜单列表 -->
+  <view class="ovh bs por plr2 br10r" style="margin-top: -8vw;line-height: 13vw;margin-bottom: 10vw;background: white;height: auto;" 
+  wx:for="{{menulist}}"  bindtap="ToPath1" data-id="{{item.pid}}" data-state="{{item.wishAuditState}}{{item.wishState}}">
+  <view style="width: 70%;display:table-cell;height:auto; padding-bottom: 2vw;">
+    <view class="w11 fll" style="height: 26px;">
+     <image src="{{img}}" style="margin-top: -1vw;vertical-align: middle;width: 26px; "  mode="widthFix"></image>
+    </view>
+    <view class="f12" style="font-size: 14px;font-weight: 400;text-align: left;vertical-align: top;margin-top: 15px;">{{item.wishContent}}</view>
+  </view>
+  <view class="line" style="margin-top: 3vw;"></view>
+    <view style="min-height: 6vw; width: 100%; padding-bottom: 2vw;display: flex;">
+      <view class="w11 fll">
+          <image src="/img/adder.png" style="margin-bottom: 4px;vertical-align: middle;width: 16px;line-height: 16px;"  mode="widthFix"></image>
+      </view>
+      <view style="float: left;font-size: 14px;line-height: 19px;float: left;color: rgba(157, 165, 166, 1);margin-top: 3.5vw;margin-left: 2vw;width:90%;">{{item.adder}}
+      </view>
+    </view>
+    <view style="min-height: 6vw; line-height: 8vw; padding-bottom: 2vw; width: 100%; display: flex;">
+     
+    <view class="dsh" wx:if="{{item.wishAuditState == 0}}">待审核</view>
+    <view class="dsh btg" wx:if="{{item.wishAuditState == 2}}">不通过</view>
+    <view class="dsh drl" wx:if="{{item.wishAuditState == 1 && item.wishState == 0}}">待认领</view>
+    <view class="dsh yrl" wx:if="{{item.wishAuditState == 1 && item.wishState == 1}}">已认领</view>
+    <view class="dsh ywc" wx:if="{{item.wishAuditState == 1 && item.wishState == 2}}">已完成</view>
+     
+      <view style="font-size: 14px;line-height: 6vw;float: left;color: rgba(157, 165, 166, 1); ;width:70vw;text-align: right; padding-top: 1vw;">
+      {{item.wishTime}}
+      </view>
+      <view style="clear: both;"></view>
+
+     
+
+
+    </view>
+    
+</view>
+  <!-- 菜单列表 -->
+ </view>
+ <!-- 加载中 -->
+  <loading hidden="{{hidden}}">加载中...</loading>  
+  <view style="height:3vw;width:100%"></view>
+
+</view>
+

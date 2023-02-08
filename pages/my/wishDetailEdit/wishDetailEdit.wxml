@@ -1,0 +1,64 @@
+<view class="mainView">
+
+<view class="topView"> 
+  <view class="topIcon">
+      <image src="{{userdata.portrait}}" style="height:10vw;width:10vw;border-radius:50%"></image>
+  </view>
+  <view class="topName">
+    <input  value="{{detail.wishusername}}"  bindinput="inputname"></input>
+  </view>
+  <view class="topBtn">
+      <view bindtap="toPage" style="background-color:rgba(251, 97, 46, 1);color:#FFF;padding:1vw;text-align:center;border-radius:5vw;width:20vw">
+      提交
+      </view>
+  </view>
+
+</view>
+
+<view class="topView" style="margin-top:2vw"> 
+  <view class="topIcon">
+      <image src="/img/local.jpg" style="height:9vw;width:9vw;border-radius:50%"></image>
+  </view>
+  <view class="topName">
+    <input style="padding-top:1vw" value="{{detail.adder}}" bindinput="inputadder"></input>
+  </view>
+
+
+</view>
+
+
+
+
+
+
+<!-- <view style="width:90%;margin-left:5%;display:table;margin-top:2vw">
+    <view style="display:table-cell;width:45%">
+      许愿地址
+    </view>
+    <view style="display:table-cell;width:45%">
+      <input data-key="adder"  bindinput="getParam"  style="padding-top:2.5vw;text-align:right"  auto-focus placeholder="请填许愿地址"/>
+    </view>
+</view> -->
+
+
+<!-- <view style="width:90%;margin-left:5%;display:table;margin-top:2vw">
+    <view style="display:table-cell;width:45%">
+      许愿金额
+    </view>
+    <view style="display:table-cell;width:45%">
+      <input data-key="money"  bindinput="getParam"  style="padding-top:2.5vw;text-align:right"  auto-focus placeholder="请填许愿金额"/>
+    </view>
+</view> -->
+
+
+
+
+
+<view style="width:90%;margin-left:5%;margin-top:4vw">
+  <textarea style="margin-left:1vw;word-wrap:break-word;word-break:break-all;overflow: hidden;line-height: 4vw; padding:1vw;" value="{{detail.wishContent}}" bindinput="inputcont"></textarea>
+</view>
+<view class="topView" style="margin-top:2vw"> 
+  <p>未通过原因为:{{detail.wishAuditRemark}} 请修改后提交</p>
+</view>
+</view>
+

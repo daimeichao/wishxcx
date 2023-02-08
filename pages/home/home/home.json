@@ -1,0 +1,10 @@
+{
+  "usingComponents": {},
+  "backgroundTextStyle": "light",
+  "onReachBottomDistance": 50,
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#015CFA",
+  "navigationBarTitleText": "闽侯揭榜挂帅服务平台",
+  "navigationBarTextStyle": "white",
+  "navigationStyle": "custom"
+}

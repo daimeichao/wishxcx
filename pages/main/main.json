@@ -3,7 +3,6 @@
   "backgroundTextStyle": "light",
   "onReachBottomDistance": 50,
   "enablePullDownRefresh": false,
-  "navigationBarBackgroundColor": "#015CFA",
-  "navigationBarTitleText": "商城",
-  "navigationBarTextStyle": "white"
-}
+  "navigationBarTitleText": "首页",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#FFFFFF"}

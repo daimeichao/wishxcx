@@ -3,6 +3,7 @@
     "van-uploader": "/miniprogram_npm/@vant/weapp/uploader/index"
   },
   "pages": [
+    "pages/main/main",
     "pages/loading/loading",
     "pages/newWish/newWish",
     "pages/index/index",

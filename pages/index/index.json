@@ -3,7 +3,7 @@
   "backgroundTextStyle": "light",
   "onReachBottomDistance": 50,
   "enablePullDownRefresh": false,
-  "navigationBarTitleText": "首页",
+  "navigationBarTitleText": "心愿广场",
   "navigationBarTextStyle": "black",
   "navigationBarBackgroundColor": "#FFFFFF"
 }

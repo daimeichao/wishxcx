@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "backgroundTextStyle": "light",
+  "onReachBottomDistance": 50,
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#015CFA",
+  "navigationBarTitleText": "志愿者申请",
+  "navigationBarTextStyle": "white"
 }

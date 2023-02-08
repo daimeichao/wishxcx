@@ -35,7 +35,7 @@
   <!-- 菜单列表 -->
  </view>
  <view class="bottomView"style="margin-bottom: 1.5vw;">
-          <view style="position:absolute;top:5vw;left:15vw;z-index:22" bindtap="toPageR" data-url="/pages/index/index">
+          <view style="position:absolute;top:5vw;left:15vw;z-index:22" bindtap="toPageR" data-url="/pages/main/main">
           <image src="../../../img/index.png" style="height:70rpx;width:70rpx"></image>
           <view style="font-size:10px;text-align:center;width:70rpx;color:rgba(166, 170, 178, 1)">首页</view>
           </view>

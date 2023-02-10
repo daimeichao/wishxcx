@@ -1,1 +1,83 @@
-/* pages/zyz/zyzsq.wxss */
+/* pages/wishDetail/wishDetail.wxss */
+
+
+.mainView{
+	height: 100vh;
+	width: 100%;
+	/* background-image: url(../../img/fm.png); */
+	background-position: center center;
+	background-size: cover;
+  }
+  
+  .detailView{
+	width: 90%;
+	margin-left: 5%;
+	background-color: #FFF;
+	border-radius: 2vw;
+	margin-top:1vw;
+  }
+  .viewItem{
+	width: 95%;
+	margin-left: 2.5%;
+	display: table;
+	padding-top: 2vw;
+	padding-bottom: 2vw;
+  }
+  
+  .viewItemImg{
+	width: 95%;
+	margin-left: 2.5%;
+   
+	padding-top: 2vw;
+	padding-bottom: 2vw;
+  }
+  
+  .itemLeft{
+	display: table-cell;
+	width: 45%;
+	font-size: 14px;
+	vertical-align:middle;
+	line-height: 12vw;
+	color: rgba(0, 0, 0, 1);
+  }
+  
+  .itemL{
+	width: 100%;
+	font-size: 14px;
+	vertical-align:middle;
+	line-height: 12vw;
+	color: rgba(0, 0, 0, 1);
+  }
+  
+  .itemRight{
+	display: table-cell;
+	width: 45%;
+	font-size: 14px;
+	text-align: right;
+	line-height: 12vw;
+	color: rgba(81, 83, 87, 1);
+   
+  }
+  
+  
+  .bottomView{
+	width: 100%;
+	background-color: #FFF;
+	line-height: 20vw;
+	height: 20vw;
+	position: fixed;
+	bottom: 0;
+  
+  }
+  
+  .btnView{
+	width: 90%;
+	margin-left: 5%;  
+	/* background-color:rgba(253, 150, 86, 1); */
+	background: linear-gradient(90deg, rgba(251, 93, 43, 1) 0%, rgba(253, 150, 86, 1) 100%);
+	line-height: 13vw;
+	color: #FFF;
+	text-align: center;
+	border-radius: 10vw;
+	margin-top: 2vw;
+  } 

@@ -3,7 +3,7 @@
   "backgroundTextStyle": "light",
   "onReachBottomDistance": 50,
   "enablePullDownRefresh": false,
-  "navigationBarBackgroundColor": "#015CFA",
   "navigationBarTitleText": "我的积分",
-  "navigationBarTextStyle": "white"
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#FFFFFF"
 }

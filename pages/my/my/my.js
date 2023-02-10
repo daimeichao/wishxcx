@@ -42,14 +42,14 @@ Page({
         id: '5',
         img: '/img/zyzsq.png',
         name: '志愿者申请',
-        path: '/pages/my/zyzsq/zyzsq',
+        path: '/pages/my/zyzsqinfo/sqinfo',
         show: '1'
       },
       {
         id: '6',
         img: '/img/goods.png',
         name: '我的兑换',
-        path: '/pages/my/mygoods/mygoods',
+        path: '/pages/mygoods/mygoods',
         show: '1'
       },
     ],
@@ -116,6 +116,21 @@ Page({
       if(id==3){
         wx.navigateTo({
           url: '/pages/my/myzhuce/myzhuce?pid=' + this.data.pid
+        })
+      }
+      if(id==4){
+        wx.navigateTo({
+          url: '/pages/my/myjf/jfxq?pid=' + this.data.pid
+        })
+      }
+      if(id==5){
+        wx.navigateTo({
+          url: '/pages/my/zyzsqinfo/sqinfo?pid=' + this.data.pid
+        })
+      }
+      if(id==6){
+        wx.navigateTo({
+          url: '/pages/mygoods/mygoods?pid=' + this.data.pid
         })
       }
   },

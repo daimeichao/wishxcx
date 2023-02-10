@@ -24,7 +24,7 @@
   <view class="ovh bs por plr2 br10r" style="margin-top: 4.5%;line-height: 13vw;background: white;height: 13vw;" wx:if="{{item.show=='1'}}" wx:for="{{menulist}}" wx:key="id" bindtap="ToPath1" data-path="{{item.path}}" data-id="{{item.id}}">
     
     <view class="w10 fll">
-     <image wx:if="{{item.id==4}}" src="{{item.img}}" style="margin-top: -1.5vw;margin-left: 1.3vw;vertical-align: middle;width: 6vw;"  mode="widthFix"></image>
+     <image wx:if="{{item.id==9}}" src="{{item.img}}" style="margin-top: -1.5vw;margin-left: 1.3vw;vertical-align: middle;width: 6vw;"  mode="widthFix"></image>
      <image wx:else src="{{item.img}}" style="margin-top: -1.5vw;vertical-align: middle;width: 8vw;"  mode="widthFix"></image>
     </view>
     <view class="fll" style="margin-left: 1vw;width: 78.5%;font-size: 12px;font-weight: 400;">{{item.name}}</view>
@@ -46,9 +46,9 @@
           </view>
 
 
-          <view style="position:absolute;width:100%;text-align:center;bottom:35%"> 
+          <!-- <view style="position:absolute;width:100%;text-align:center;bottom:35%"> 
             <image bindtap="toPageR" data-url="/pages/newWish/newWish" src="../../../img/wish.png" style="height:150rpx;width:150rpx"></image>
-          </view>
+          </view> -->
       </view>
  <!-- 加载中 -->
   <loading hidden="{{hidden}}">加载中...</loading>  

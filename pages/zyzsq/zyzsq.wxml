@@ -1,2 +1,97 @@
-<!--pages/zyz/zyzsq.wxml-->
-<text>pages/zyz/zyzsq.wxml</text>
+<view class="mainView">
+  <view style="padding-left:5vw;position:relative">
+
+  <image src="../../img/fm.png" style="height:300rpx;width:100%;"></image>
+  </view>
+
+
+  <view class="detailView">
+
+    
+<view class="viewItem"> 
+  <view class="itemLeft">
+  <image src="../../img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
+  <p style="margin-left:1vw;padding-top:10px">志愿者姓名</p>
+  </view>
+  <view class="itemRight" style="text-align:left;line-height:5vw">
+    <input data-key="zyzname" value="{{userInfo.name}}"  bindinput="getParam"  style="padding-top:2.5vw;text-align:right"  auto-focus placeholder="请填写姓名"/>
+
+  <!-- <p style="margin-left:1vw;word-wrap:break-word;word-break:break-all;overflow: hidden;"></p> -->
+  </view>
+
+
+
+  
+
+</view>
+<view style="height:1px;width:100%;background-color:rgba(245, 245, 245, 1)"></view>
+  
+    <view class="viewItem"> 
+      <view class="itemLeft">
+      <image src="../../img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
+      <p style="margin-left:1vw;padding-top:10px">申请时间</p>
+      </view>
+      <view class="itemRight">
+      <!-- <p style="margin-left:1vw;padding-top:10px">asdsadasd</p> -->
+      <picker mode="date" value="{{date}}"   bindchange="bindTimeChange">
+        <view class="picker">
+          <p wx:if="{{time===null || time===''}}">请选择时间 ></p> {{time}}
+        </view>
+      </picker>
+      </view>
+
+   
+    </view>
+    <view style="height:1px;width:100%;background-color:rgba(245, 245, 245, 1)"></view>
+
+    <view class="viewItem"> 
+      <view class="itemLeft">
+      <image src="../../img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
+      <p style="margin-left:1vw;padding-top:10px">申请原因</p>
+      </view>
+      <view class="itemRight" style="text-align:left;line-height:5vw">
+        <input data-key="reason" value="{{reason}}"  bindinput="getParamIpt"  style="padding-top:2.5vw;text-align:right"  auto-focus placeholder="请填写原因"/>
+ 
+      <!-- <p style="margin-left:1vw;word-wrap:break-word;word-break:break-all;overflow: hidden;"></p> -->
+      </view>
+
+
+
+      
+   
+    </view>
+    <view style="height:1px;width:100%;background-color:rgba(245, 245, 245, 1)"></view>
+
+
+    <view class="viewItemImg"> 
+      <view class="itemL">
+      <image src="../../img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
+      <p style="margin-left:1vw;padding-top:10px">头像</p>
+      </view>
+   
+
+      <view style="display:table-cell;width:100%">
+        
+
+        <view wx:for="{{imageList}}" style="margin-right:2vw;position:relative;display:inline-block" >
+          <image data-index="{{index}}" bindtap="delImage" src="../../img/close.png"  style="height:38rpx;width:38rpx;position:absolute;top:0;right:0"></image>
+          <image bindtap="previewImage" data-path="{{item}}" src="{{item}}" style="height:25vw;width:25vw;"></image>
+        </view>
+
+
+        <view style="height:25vw;width:25vw;display:inline-block">
+          <image bindtap="img_w_show" src="../../img/imgAdd.png" style="width:100%;height:100%">
+          </image>
+        </view>
+
+
+      </view>
+    </view>
+  </view>
+
+
+  <view class="bottomView">
+    <view class="btnView" bindtap="realizationWish">确认</view>
+  </view>
+
+</view>

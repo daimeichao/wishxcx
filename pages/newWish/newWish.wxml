@@ -61,7 +61,7 @@
 
 
   <view class="bottomView">
-      <view style="z-index:33;position:absolute;top:3vw;left:15vw" catchtap="toPageR" data-url="/pages/index/index">
+      <view style="z-index:33;position:absolute;top:3vw;left:15vw" catchtap="toPageR" data-url="/pages/main/main">
       <image src="../../img/index.png" style="height:70rpx;width:70rpx"></image>
       <view style="font-size:10px;text-align:center;width:70rpx;color:rgba(166, 170, 178, 1)">首页</view>
       </view>

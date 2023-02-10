@@ -1,2 +1,3 @@
-<!--pages/jfphb/jfphb.wxml-->
-<text>pages/jfphb/jfphb.wxml</text>
+<view class="mainView" style="background-image:url(../../img/bj.jpg);">
+
+</view>

@@ -1,2 +1,4 @@
 <!--pages/mygoods/mygoods.wxml-->
-<text>pages/mygoods/mygoods.wxml</text>
+<view class="mainView" style="background-image:url(../../img/bj.jpg);">
+</view>
+

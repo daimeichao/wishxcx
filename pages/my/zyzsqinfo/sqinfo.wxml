@@ -1,2 +1,4 @@
 <!--pages/my/zyzsqinfo/sqinfo.wxml-->
-<text>pages/my/zyzsqinfo/sqinfo.wxml</text>
+<view class="mainView" style="background-image:url(../../img/bj.jpg);">
+</view>
+

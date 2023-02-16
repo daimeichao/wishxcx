@@ -1,3 +1,17 @@
+
 <view class="mainView" style="background-image:url(../../img/bj.jpg);">
 
+	<view class="viewItem">
+	<view wx:for="{{phblist}}" data-index="{{index}}" wx:key="index"> 
+      <view class="itemLeft">
+      <image src="../../img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
+      <p style="margin-left:1vw;padding-top:10px">
+	  {{item.name}}</p>
+      </view>
+      <view class="itemRight">
+      <p style="margin-left:1vw;padding-top:10px">{{item.zf}}</p>
+      </view></view>
+
+   
+    </view>
 </view>

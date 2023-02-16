@@ -241,7 +241,7 @@ console.log(that.data.zyzname);
       //   if (sm.confirm) {
             // 用户点击了确定 可以调用删除方法了
             that.data.imageList.splice(e.currentTarget.dataset.index,1) 
-            console.log(that.data.imageList)
+            console.log(that.data.imageList,"图片")
             that.setData({
               imageList: that.data.imageList 
             })

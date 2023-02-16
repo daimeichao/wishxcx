@@ -1,2 +1,13 @@
 <view class="mainView" style="background-image:url(../../img/bj.jpg);">
-</view>
+	<view class="book-list-wrap">
+      <text class="book-list-title">精品推荐</text>
+      <view class="b-tags">
+        <text class="b-tags-name" wx:for="{{tags}}" wx:key="{{item}}">{{item}}</text>
+      </view>
+      <book-card
+        id="book-card"
+        bind:onEnterDeatil="_onEnterDeatil"
+        bookList="{{goods}}" />
+    </view>
+  </view>
+

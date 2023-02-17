@@ -1,0 +1,59 @@
+<!--pages/goods1/goods1.wxml-->
+<!--商品幻灯片-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" class="banner"
+  duration="{{duration}}" circular="{{duration}}">
+
+    <swiper-item>
+      <image src="{{map.url}}" class="slide-image" mode="aspectFill" data-src='{{map.url}}'
+        bindtap="previewImage" />
+    </swiper-item>
+</swiper>
+<!-- <swiper class="banner">
+	
+	<image src="{{map.url}}" class="slide-image" mode="aspectFill" bindtap="previewImage" /></swiper> -->
+<!--商品幻灯片 end-->
+<view class="info-price clear">
+  <view class='price'>{{map.spprice}} </view>
+  <view class='fenxiang'>
+    <button class='fxbtn' open-type="share">
+      <view style='height:20px;margin-top:8px;'>
+        <image src="{{map.url}}" mode="aspectFill"></image>
+      </view>
+      <view>分享</view>
+    </button>
+  </view>
+</view>
+<view class="info-title">
+  <text>{{map.spname}}</text>
+</view>
+
+<view style="border-top:1px solid #F6F6F6;background: #fff; padding:5px 15px;">
+  <view class="clearfix flex grey gridXt">
+    <text class="sub">
+      <block wx:if='{{goods_info.goods_yunfei==0.00}}'>运费：包邮</block>
+      <block wx:else>运费：{{goods_info.goods_yunfei}}</block>
+    </text>
+    <text class="sub">库存：{{map.kc}}</text>
+    <text class="sub">销量：{{goods_info.goods_xiaoliang}}</text>
+  </view>
+</view>
+<!--商品详情-->
+<view class='details_box'>
+  <view style="height:40px;line-height: 40px;border-bottom:1px solid #f5f5f5;">
+    <view>商品详情</view>
+  </view>
+  <view style='padding:10px 0px;'>
+    <view class="wxParse">
+      {{map.spxq}}
+    </view>
+  </view>
+</view>
+
+<!--底部浮动 start-->
+<view class="foot-nav mt15">
+  <view class="flex con gridXt tc">
+    <view  style="align-items: center;"class="add-cart sub f16">
+      <button class="add-cart-btn" bindtap='buy'>立即购买</button>
+    </view>
+  </view>
+</view>

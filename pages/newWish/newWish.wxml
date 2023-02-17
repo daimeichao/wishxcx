@@ -71,9 +71,5 @@
       <view style="font-size:10px;text-align:center;width:70rpx;color:rgba(166, 170, 178, 1)">我的</view>
       </view>
 
-
-      <view style="position:absolute;width:100%;text-align:center;bottom:35%"> 
-        <image  src="../../img/wish.png" style="height:150rpx;width:150rpx"></image>
-      </view>
   </view>
 </view>

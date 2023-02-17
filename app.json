@@ -24,7 +24,8 @@
     "pages/my/zyzsqinfo/sqinfo",
     "pages/jfphb/jfphb",
     "pages/goods/goods",
-    "pages/mygoods/mygoods"
+    "pages/mygoods/mygoods",
+    "pages/gooddetail/gooddetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

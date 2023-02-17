@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    sqsj:"",
     date:'',
     time:'',
     pid:'',
@@ -82,7 +83,7 @@ Page({
   bindTimeChange: function(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
-      time: e.detail.value
+      sqsj: e.detail.value
     })
   },
   //自定义方法
@@ -93,7 +94,7 @@ Page({
 
   realizationWish(){
     var that =this 
-    if(that.data.time === null ||that.data.time ==='' ){
+    if(that.data.sqsj === null ||that.data.sqsj==='' ){
       app.toast('请选择时间')
       return 
     }
@@ -114,24 +115,26 @@ console.log(that.data.zyzname);
         "Content-Type": "application/json",
       }, // 设置请求的 header
       data: {
-        pid:that.data.pid,
+        // pid:that.data.pid,
         tx:that.data.imageList[0],
-        zyzname:that.data.userInfo.name,
-        zyzid:that.data.userInfo.pid,
-        sq_time:that.data.time,
+        // zyzname:that.data.userInfo.name,
+        zyzname:that.data.zyzname,
+        // zyzid:that.data.userInfo.pid,
+        zyzid:1,
+        sq_time:that.data.sqsj,
         reason:that.data.reason,
         zyz_audit_remark:''
       },
       success: function (res) {
         let result = res.data.data
         if(result.resultCode ===2000){ // 成功
-
+         
           let resultId = result.wishClaimant.pid
           // uploadFile
           let imageList = that.data.imageList
           imageList.forEach(element => {
             wx.uploadFile({
-              url:  app.globalData.webroot + 'xcx/api/fileupload', //仅为示例，非真实的接口地址
+              url: 'xcx/api/fileupload', //仅为示例，非真实的接口地址
               filePath: element,
               name: 'file',
               header: {

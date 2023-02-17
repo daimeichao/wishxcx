@@ -14,7 +14,7 @@
   <p style="margin-left:1vw;padding-top:10px">志愿者姓名</p>
   </view>
   <view class="itemRight" style="text-align:left;line-height:5vw">
-    <input data-key="zyzname" value="{{userInfo.name}}"  bindinput="getParam"  style="padding-top:2.5vw;text-align:right"  auto-focus placeholder="请填写姓名"/>
+    <input data-key="zyzname" value="{{zyzname}}"  bindinput="getParam"  style="padding-top:2.5vw;text-align:right"  auto-focus placeholder="请填写姓名"/>
 
   <!-- <p style="margin-left:1vw;word-wrap:break-word;word-break:break-all;overflow: hidden;"></p> -->
   </view>
@@ -33,9 +33,9 @@
       </view>
       <view class="itemRight">
       <!-- <p style="margin-left:1vw;padding-top:10px">asdsadasd</p> -->
-      <picker mode="date" value="{{date}}"   bindchange="bindTimeChange">
+      <picker mode="date" value="{{sqsj}}"   bindchange="bindTimeChange">
         <view class="picker">
-          <p wx:if="{{time===null || time===''}}">请选择时间 ></p> {{time}}
+          <p wx:if="{{sqsj===null || sqsj===''}}">请选择时间 ></p> {{sqsj}}
         </view>
       </picker>
       </view>
@@ -50,7 +50,7 @@
       <p style="margin-left:1vw;padding-top:10px">申请原因</p>
       </view>
       <view class="itemRight" style="text-align:left;line-height:5vw">
-        <input data-key="reason" value="{{reason}}"  bindinput="getParamIpt"  style="padding-top:2.5vw;text-align:right"  auto-focus placeholder="请填写原因"/>
+        <input data-key="reason" value="{{reason}}"  bindinput="getParam"  style="padding-top:2.5vw;text-align:right"  auto-focus placeholder="请填写原因"/>
  
       <!-- <p style="margin-left:1vw;word-wrap:break-word;word-break:break-all;overflow: hidden;"></p> -->
       </view>

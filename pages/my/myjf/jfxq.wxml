@@ -1,4 +1,14 @@
-<!--pages/my/myjf/jfxq.wxml-->
-<view class="mainView" style="background-image:url(../../img/bj.jpg);">
+<view class="item-box">
+  <view class="items">
+    <view wx:for="{{list}}" wx:key="{{index}}" class="item">
+      <view data-index="{{index}}" class="inner txt">
+        <image class="item-icon" mode="widthFix" src="{{item.portrait}}"></image>
+        <i> {{item.name}}</i>
+        <span class="item-data">
+          <i class="rankpace"> {{item.zf}}</i>
+          <image class="item-icon" mode="widthFix" src="../../img/jf.png"></image>
+        </span>
+      </view>
+    </view>
+  </view>
 </view>
-

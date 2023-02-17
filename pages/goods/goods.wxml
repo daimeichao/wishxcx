@@ -1,13 +1,14 @@
-<view class="mainView" style="background-image:url(../../img/bj.jpg);">
-	<view class="book-list-wrap">
-      <text class="book-list-title">精品推荐</text>
-      <view class="b-tags">
-        <text class="b-tags-name" wx:for="{{tags}}" wx:key="{{item}}">{{item}}</text>
+<view class="mainWish">
+        <view class="wishList">
+      <view wx:for="{{list}}" style="" class="bgimage{{index % 6}}" bindtap="toPage" data-url="/pages/gooddetail/gooddetail?pid={{item.pid}}">
+            <view style="width: 70%;height: 70%;margin:-5vw 8vw;" class="wishName">       
+              <image src="{{item.url}}" style="width: 100%;height: 100%;"></image>   </view>
+      <view style="margin:-4vw 3vw;" class="userView">
+              <view class="item2" style="left: 5vw;">
+              {{item.spname}} 
+              </view>
+            </view>
+     </view>
+     <view style="width:100%;height:20vw"></view>
+        </view>
       </view>
-      <book-card
-        id="book-card"
-        bind:onEnterDeatil="_onEnterDeatil"
-        bookList="{{goods}}" />
-    </view>
-  </view>
-

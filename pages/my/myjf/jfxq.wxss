@@ -2,7 +2,18 @@ view {
 	box-sizing: border-box;
   }
   
+.mainView{
+	height: 100vh;
+	width: 100%;
+  
+	/* background-image: url(https://hxjtg.fzjiading.com/wxy-api/img/wishbg.jpg); */
+	/* background-color: beige; */
+	background-position: center center;
+	background-size: cover;
+  }
+  
   .item-box {
+	
 	width: 700rpx;
 	margin: 0 auto;
 	padding: 40rpx 0;
@@ -10,10 +21,12 @@ view {
   
   .items {
 	width: 100%;
+	background-color: beige;
   }
   
   .item {
 	position: relative;
+	
 	border-top: 2rpx solid #eee;
 	height: 120rpx;
 	line-height: 120rpx;

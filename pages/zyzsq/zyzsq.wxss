@@ -1,67 +1,85 @@
-/* pages/my/myzhuce/myzhuce.wxss */
+/* pages/wishDetail/wishDetail.wxss */
 
-.link-top {
-	width: 85vw;
-	height: 1px;
-	margin-top: 2vw;
-	border-top: solid rgba(240, 240, 240, 1) 1px;
-  }
-  .zhuce0{
-	background: rgba(235, 236, 237, 1);
+
+.mainView{
+	height: 100vh;
+	width: 100%;
   
-	width: 100vw;
-  }
-  .zhuce1{
-	background: rgba(235, 236, 237, 1);
-	height: 360vw;
-	width: 100vw;
-  }
-  .zhucebj0{
-	float: left;
-	width: 92vw;
-	height: 320vw;
-  }
-  .zhucebj1{
-	float: left;
-	width: 92vw;
+	/* background-image: url(https://hxjtg.fzjiading.com/wxy-api/img/wishbg.jpg); */
+	background-color: beige;
+	background-position: center center;
+	background-size: cover;
   }
   
-  .zhucebg0{
-	float: left;
-	width: 92vw;
-	position: absolute;
-	top: 4vw;
-	left: 4vw;
-	z-index: 999;
-	/* background-color: aqua; */
+  .detailView{
+	width: 90%;
+	margin-left: 5%;
+	background-color: #FFF;
+	border-radius: 2vw;
+	margin-top: 5vw;
   }
-  .zhucebg1{
-	float: left;
-	width: 92vw;
-	/* margin-top: -347vw; */
-	position: absolute;
-	top: 0;
-	left: 4vw;
-	z-index: 999;
-  }
-  .h35{
-	margin-left:4vw;float: left;
-  }
-  .h42{
-	margin-left:4vw;margin-top: -42vw;float: left;
-  }
-  .zc0{
-	margin-top: 12vw;float: right;
+  .viewItem{
+	width: 95%;
+	margin-left: 2.5%;
+	display: table;
+	padding-top: 2vw;
+	padding-bottom: 2vw;
   }
   
-  .zc1{
-	margin-top: 5vw;float: right;
+  .viewItemImg{
+	width: 95%;
+	margin-left: 2.5%;
+   
+	padding-top: 2vw;
+	padding-bottom: 2vw;
   }
-  .topnav{
-	position:relative;
+  
+  .itemLeft{
+	display: table-cell;
+	width: 45%;
+	font-size: 14px;
+	vertical-align:middle;
+	line-height: 12vw;
+	color: rgba(0, 0, 0, 1);
   }
-  .topchild{
-	margin: 0 auto;
+  
+  .itemL{
+	width: 100%;
+	font-size: 14px;
+	vertical-align:middle;
+	line-height: 12vw;
+	color: rgba(0, 0, 0, 1);
+  }
+  
+  .itemRight{
+	display: table-cell;
+	width: 45%;
+	font-size: 14px;
+	text-align: right;
+	line-height: 12vw;
+	color: rgba(81, 83, 87, 1);
+   
+  }
+  
+  
+  .bottomView{
+	width: 100%;
+	background-color: #FFF;
+	line-height: 20vw;
+	height: 20vw;
+	position: fixed;
+	bottom: 0;
+  
+  }
+  
+  .btnView{
+	width: 90%;
+	margin-left: 5%;  
+	/* background-color:rgba(253, 150, 86, 1); */
+	background: linear-gradient(90deg, rgba(251, 93, 43, 1) 0%, rgba(253, 150, 86, 1) 100%);
+	line-height: 13vw;
+	color: #FFF;
 	text-align: center;
-	margin-top: -120px;
-  }
+	border-radius: 10vw;
+	margin-top: 2vw;
+  } 

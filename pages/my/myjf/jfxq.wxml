@@ -1,3 +1,4 @@
+<view class="mainView">
 <view class="item-box">
   <view class="items">
     <view wx:for="{{list}}" wx:key="{{index}}" class="item">
@@ -12,4 +13,5 @@
       </view>
     </view>
   </view>
+</view>
 </view>

@@ -45,13 +45,13 @@ Page({
         path: '/pages/my/zyzsqinfo/sqinfo',
         show: '1'
       },
-      {
-        id: '6',
-        img: '/img/goods.png',
-        name: '我的兑换',
-        path: '/pages/mygoods/mygoods',
-        show: '1'
-      },
+      // {
+      //   id: '6',
+      //   img: '/img/goods.png',
+      //   name: '我的兑换',
+      //   path: '/pages/mygoods/mygoods',
+      //   show: '1'
+      // },
     ],
     array:[],
     arrayid:[],

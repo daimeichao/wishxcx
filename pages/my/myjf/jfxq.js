@@ -1,10 +1,10 @@
 const app = getApp();
 Page({
   data: {
+    list:[],
     pageNo:1,
     pageSize:10,
     total:0,
-    list:[],
     webroot:app.globalData.webroot
   },
 
@@ -68,13 +68,14 @@ Page({
     var that =this 
 
     wx.request({
-      url: app.globalData.webroot + 'xcx/api/getphb', //上线的话必须是https，没有appId的本地请求貌似不受影响 
+      url: app.globalData.webroot + 'xcx/my/getmyjf', //上线的话必须是https，没有appId的本地请求貌似不受影响 
       method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT 
       header: {
         // 'Content-Type': "application/x-www-form-urlencoded",
         "Content-Type": "application/json",
       }, // 设置请求的 header
       data: {
+        pid:1,
         pageindex: 1,
         pagesize: that.data.pageSize,
       },
@@ -97,4 +98,5 @@ Page({
         }
       },
     })
-  },})
+  },
+})

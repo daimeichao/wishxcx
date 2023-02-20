@@ -35,7 +35,7 @@
       <!-- <p style="margin-left:1vw;padding-top:10px">asdsadasd</p> -->
       <picker mode="date" value="{{sqsj}}"   bindchange="bindTimeChange">
         <view class="picker">
-          <p wx:if="{{sqsj===null || sqsj===''}}">请选择时间 ></p> {{sqsj}}
+          <p wx:if="{{sqsj===null || sqsj===''}}">请选择时间 </p> {{sqsj}}
         </view>
       </picker>
       </view>

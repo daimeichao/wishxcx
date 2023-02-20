@@ -1,12 +1,13 @@
 <view class="item-box">
   <view class="items">
     <view wx:for="{{list}}" wx:key="{{index}}" class="item">
-      <view data-index="{{index}}" class="inner txt">
-        <image class="item-icon" mode="widthFix" src="{{item.portrait}}"></image>
-        <i> {{item.name}}</i>
+      <view data-index="{{index}}" class="inner txt" style="color: tomato;">
+        <text class="rankpace"> {{item.remark}}</text>
+        <text style="color: teal;left:20vw" wx:if="{{item.change1=='1'}}">消费 </text>
+        <text style="color: rgb(184, 79, 65);" wx:if="{{item.change1=='0'}}">新增 </text>
         <span class="item-data">
-          <i class="rankpace"> {{item.zf}}</i>
-          <image class="item-icon" mode="widthFix" src="../../img/jf.png"></image>
+          <text class="rankpace"> {{item.changenum}}</text>
+          <image class="item-icon" mode="widthFix" src="../../../img/jf.png"></image>
         </span>
       </view>
     </view>

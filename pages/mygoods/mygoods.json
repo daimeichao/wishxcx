@@ -1,9 +1,0 @@
-{
-  "usingComponents": {},
-  "backgroundTextStyle": "light",
-  "onReachBottomDistance": 50,
-  "enablePullDownRefresh": false,
-  "navigationBarTitleText": "我的兑换",
-  "navigationBarTextStyle": "black",
-  "navigationBarBackgroundColor": "#FFFFFF"
-}

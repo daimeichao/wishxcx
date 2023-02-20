@@ -104,6 +104,7 @@ console.log(that.data.zyzname);
       //return 
       this.setData({
         zyzname: that.data.userInfo.name
+        
       })
     }
     console.log('----'+that.data.zyzname);

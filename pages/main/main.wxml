@@ -38,12 +38,12 @@
 
 
       <view class="bottomView" style="margin-bottom: 1.5vw;">
-          <view style="position:absolute;top:3vw;left:15vw">
+          <view style="position:absolute;top:2vw;left:15vw">
           <image src="../../img/index-on.png" style="height:70rpx;width:70rpx"></image>
           <view style="font-size:10px;text-align:center;width:70rpx;color:rgba(251, 98, 47, 1)">首页</view>
           </view>
 
-          <view style="position:absolute;top:3vw;right:15vw;z-index:22" bindtap="toPageR" data-url="/pages/my/my/my">
+          <view style="position:absolute;top:2vw;right:15vw;z-index:22" bindtap="toPageR" data-url="/pages/my/my/my">
           <image src="../../img/my.png" style="height:70rpx;width:70rpx"></image>
           <view style="font-size:10px;text-align:center;width:70rpx;color:rgba(166, 170, 178, 1)">我的</view>
           </view>

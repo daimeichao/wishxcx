@@ -4,8 +4,8 @@
 .mainView{
   height: 100vh;
   width: 100%;
-
-  background-image: url(https://hxjtg.fzjiading.com/wxy-api/img/wishbg.jpg);
+  background-color: #b3dee5;
+  /* background-image: url(https://hxjtg.fzjiading.com/wxy-api/img/wishbg.jpg); */
   background-position: center center;
   background-size: cover;
 }
@@ -60,8 +60,9 @@
   margin-left: 5%;  
   /* background-color:rgba(253, 150, 86, 1); */
 
-
-  background: linear-gradient(90deg, rgba(251, 93, 43, 1) 0%, rgba(253, 150, 86, 1) 100%);
+/* 
+  background: linear-gradient(90deg, rgba(251, 93, 43, 1) 0%, rgba(253, 150, 86, 1) 100%); */
+  background-color: #31525b;
   line-height: 13vw;
   color: #FFF;
   text-align: center;

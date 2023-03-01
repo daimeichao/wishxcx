@@ -555,3 +555,26 @@ open-data[type="userAvatarUrl"]{
   color: rgba(108, 217, 54, 1);
   
 }
+.zt{
+  font: 24px "微软雅黑";/*设置字体和字体大小*/
+  top:25vw;
+  left:50vw;
+  position: absolute;
+  font-weight: 500; /*设置字体粗细*/
+  text-align: center; /*设置文字居中*/
+  color: #ffa101; /*设置文字颜色*/
+  -webkit-animation:swing 2s infinite;/*设置动画*/
+}
+@-webkit-keyframes swing{/*创建动画*/
+  20%{
+     -webkit-transform:rotate(15deg);
+  }40%{
+     -webkit-transform:rotate(-15deg);
+  }60%{
+     -webkit-transform:rotate(5deg);
+  }80%{
+     -webkit-transform:rotate(-5deg);
+  }100%{
+     -webkit-transform:rotate(0deg);
+  }
+}

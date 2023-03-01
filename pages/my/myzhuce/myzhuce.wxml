@@ -1,17 +1,17 @@
-<view class="zhuce0">
-  <view style="float: left;">
-    <view>
-      <image src="https://hxjtg.fzjiading.com/wxy-api/img/my-bj.png" style="width: 100vw;z-index: 1;" mode="widthFix"></image>
-      
-    </view>
+<!-- <view class="zhuce0"> -->
+  <view style="height: 184px;">
+  <view class="topnav">
+    <view style="width: 100vw;height: 184px;background-color: #b3dee5;">
+    </view> 
+    <view class="w100 topchild" >
+      <image  src="{{userdata.portrait}}" style="width: 63px;height: 63px;border-radius: 50%;overflow: hidden;" mode="widthFix" mode="widthFix"></image>
+     </view>
   </view>
-  <view class="h35">
-    <!-- <image src="/img/132.png" class="zhucebj1"></image> -->
+
+</view>
     <view class="zhucebg0">
-     
-      <image  src="{{userdata.portrait}}" style="border-radius: 50%;float: left;width: 24vw;margin-left:35vw;margin-top: 10vw;" mode="widthFix"></image>
-      <view style="float: right;padding-left: 4vw;padding-right: 4vw;width: 92vw;font-size: 16px;font-weight: 400;margin-top:21vw;">
-        <view style="margin-top: 4vw;" >
+     <view style="float: right;padding-left: 4vw;padding-right: 4vw;width: 92vw;font-size: 16px;font-weight: 400;margin-top:55vw;">
+        <view >
           <view style="color: red;float: left;width: 3vw;">*</view>姓名
           <input data-gater="userSetInfo.xm" maxlength="10" bindinput="inputFrame" value="{{userdata.name}}" type="text" style="float: right; text-align: right;width: 52vw;color: rgba(140, 137, 137, 1);" type="text"></input>
           <view class="link-top"></view>
@@ -26,13 +26,8 @@
           <p data-gater="userSetInfo.phone" maxlength="11"  bindblur="sendPhone" bindinput="inputFrame"  type="number" style="float: right; text-align: right;width: 52vw;color: rgba(140, 137, 137, 1);">{{userdata.phone}}</p>
           <view class="link-top"></view>
         </view>
-      </view>
     </view>
-  </view>
   <view>
-      <button style="font-size: 16px;font-weight: 400;background-color:rgba(251, 97, 46, 1);width: 92vw;line-height: 10vw;margin-right: 4vw;color: white;position: fixed;bottom: 4vw;left: 4vw;z-index: 9999;" bindtap="edituser">保存</button>
+      <button style="font-size: 16px;font-weight: 400;background-color:#31525b;width: 92vw;line-height: 10vw;margin-right: 4vw;color: white;position: fixed;bottom: 4vw;left: 4vw;z-index: 9999;" bindtap="edituser">保存</button>
     </view>
-
-  <!-- 加载中 -->
-  <!-- <loading hidden="{{hidden}}">加载中...</loading> -->
-</view>
+    </view>

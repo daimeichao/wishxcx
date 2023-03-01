@@ -25,7 +25,8 @@
     "pages/jfphb/jfphb",
     "pages/goods/goods",
     "pages/mygoods/mygoods",
-    "pages/gooddetail/gooddetail"
+    "pages/gooddetail/gooddetail",
+    "pages/register/register"
   ],
   "window": {
     "backgroundTextStyle": "light",

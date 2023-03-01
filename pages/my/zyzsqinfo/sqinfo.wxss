@@ -4,8 +4,7 @@
 .mainView{
 	height: 100vh;
 	width: 100%;
-  
-	background-image: url(https://hxjtg.fzjiading.com/wxy-api/img/wishbg.jpg);
+  	background-color: #b3dee5;
 	background-position: center center;
 	background-size: cover;
   }

@@ -3,7 +3,7 @@
   "backgroundTextStyle": "light",
   "onReachBottomDistance": 50,
   "enablePullDownRefresh": false,
-  "navigationBarBackgroundColor": "#015CFA",
-  "navigationBarTitleText": "榜单详情",
-  "navigationBarTextStyle": "white"
+  "navigationBarTitleText": "注册",
+  "navigationBarTextStyle": "black",
+  "navigationBarBackgroundColor": "#FFFFFF"
 }

@@ -7,7 +7,7 @@ var   userInfo = {}
 Page({
   data: {
     appmain: app.globalData.webroot,
-    pid:"",
+    pid:1,
     openid:"",
     projectbean: {},
     menulist: [{
@@ -45,22 +45,18 @@ Page({
         path: '/pages/my/zyzsqinfo/sqinfo',
         show: '1'
       },
-      // {
-      //   id: '6',
-      //   img: '/img/goods.png',
-      //   name: '我的兑换',
-      //   path: '/pages/mygoods/mygoods',
-      //   show: '1'
-      // },
+      {
+        id: '6',
+        img: '/img/goods.png',
+        name: '注册',
+        path: '/pages/register/register',
+        show: '1'
+      },
     ],
-    array:[],
-    arrayid:[],
-    arrayall:{},
+  
     hidden: true, //loading
-    userdata: [],
-    ifGetUserInfo: false, //是否获取用户信息
-    ifgetuser: false, //是否获取用户信息
-    gettelbtn: true, //获取手机号码
+    userdata:  {},
+  
     registerflag:''
   },
   onLoad: function () {
@@ -69,33 +65,36 @@ Page({
       userdata: wxuserInfo,
       openid:wxuserInfo.openid
     })
-    this.getSelectData();
+    this.getDetail()
   },
   onShow: function () {
-
+    this.getDetail()
   },
 
-  getSelectData: function () {
-    var that =this;
+  getDetail(){
+    var that =this 
+    // use api
     wx.request({
-      url: app.globalData.Jweb+'wish/my/info',
-      data: {
-        openid:that.data.openid
-      },
-      method: 'get',
+      url: app.globalData.webroot + 'xcx/api/getUserById', //上线的话必须是https，没有appId的本地请求貌似不受影响 
+      method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT 
       header: {
-        'content-type': 'application/json;charset=UTF-8',
+        "Content-Type": "application/json",
+      }, // 设置请求的 header
+      data: {
+        pid:that.data.pid
+        // pid:1
       },
       success: function (res) {
-        that.setData({
-          userdata:res.data.data.data[0],
-          pid:res.data.data.data[0].pid
-        })
+        let result = res.data.data
+        if(result.resultCode ===2000){ // 成功
+          that.setData({
+         userdata:result.detail
+          })
+        }else{ // 失败
+          app.toast(result.message)
+        }
       },
-      fail: function (e) {
-        that.opact("操作失败，请稍后再试");
-      }
-    });
+    })
   },
   ToPath1: function (e) {
     // var that = this;
@@ -130,7 +129,7 @@ Page({
       }
       if(id==6){
         wx.navigateTo({
-          url: '/pages/mygoods/mygoods?pid=' + this.data.pid
+          url: '/pages/register/register?pid=' + this.data.pid
         })
       }
   },

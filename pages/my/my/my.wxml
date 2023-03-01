@@ -1,20 +1,16 @@
 <view class="mh100vh" >
 <view style="height: 184px;">
-  <!-- <view style="background-color: rgba(1, 92, 250, 1);width: 100vw;z-index: 1">
-    <image src="../../../img/jbxib1.png" style="width: 6vw;margin-left: 5vw;margin-top: 3vh;" mode="widthFix"></image> 
-    <view  style="margin-left: 13vw;margin-top: -7vw;font-size: 18px;color:rgba(255, 255, 255, 1);">我的</view>   
-
-  </view> -->
   <view class="topnav">
-    <image src="https://hxjtg.fzjiading.com/wxy-api/img/my-bj.png" style="width: 100vw;z-index: 1;height: 184px;" mode="widthF ix">
-    </image>
-    <view class="w100 topchild" style="z-index: 111;">
-      <image src="https://img2.baidu.com/it/u=2833484760,1116678162&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500" style="width: 63px;height: 63px;border-radius: 50%;overflow: hidden;" mode="widthFix"></image>
-      <view class="fontw500"  style="margin:0 auto;font-size: 16px;color: white;margin-top: 2vw;">{{userdata.nick}}
-    </view>
+    <view style="width: 100vw;z-index: 1;height: 184px;background-color: #b3dee5;">
+    </view> 
+    <view class="w100 topchild" >
+      <!-- <image src="../../../img/tx.png" style="width: 63px;height: 63px;border-radius: 50%;overflow: hidden;" mode="widthFix"></image> -->
+      <image  src="{{userdata.portrait}}" style="width: 63px;height: 63px;border-radius: 50%;overflow: hidden;" mode="widthFix" mode="widthFix"></image>
+      <view class="fontw500"  style="margin:0 auto;font-size: 16px;color: white;margin-top: 2vw;z-index: 9999;">{{userdata.nick}}
+      </view>
     
-  </view>
     </view>
+  </view>
 
 </view>
 

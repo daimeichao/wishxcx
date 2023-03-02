@@ -8,7 +8,10 @@ Page({
   data: {
     pid:1,
    userdata:{},
-    userInfo:{}
+    userInfo:{},
+    nick:"",
+    name:"",
+    phone:""
   },
 
   /**
@@ -90,7 +93,10 @@ Page({
         let result = res.data.data
         if(result.resultCode ===2000){ // 成功
           that.setData({
-         userdata:result.detail
+         userdata:result.detail,
+         nick:result.detail.nick,
+         name:result.detail.name,
+         phone:result.detail.phone
           })
         }else{ // 失败
           app.toast(result.message)
@@ -98,55 +104,57 @@ Page({
       },
     })
   },
+   /**
+   * 提示文字
+   */
+  opact: function (txt) {
+    wx.showToast({
+      title: txt,
+      mask: false,
+      icon: "none",
+      duration: 2000
+    });
+  },
   edituser() {
-        var that = this;
-        if (that.data.userdata) {
-          if (that.data.userdata.name == '' ||that.data.userdata.name == null) {
-            that.opact("姓名不能为空");
-            return
-          }
-        }
-    
-        // console.log("that.data.fromJb",that.data.fromJb); 
-        if (!that.data.userdata) {
-          console.log("that.data.formData.phone",that.data.userdata.phone);
-          if (that.data.userdata.phone === '' || that.data.userdata.phone === null || that.data.userdata.phone === undefined) {
-            that.opact("联系方式不能为空");
-            return
-          }
-          if(!that.checkPhone(that.data.userdata.phone)){
-            that.opact("联系方式格式不正确");
-            return
-          }
-        }
+      var that = this;
+      if (that.data.name == '' || that.data.name == null) {
+        that.opact("姓名不能为空");
+        return
+      }
+      if (that.data.phone === '' || that.data.phone === null || that.data.phone === undefined) {
+        that.opact("联系方式不能为空");
+        return
+      }
+      if(that.data.nick=== '' || that.data.nick=== null || that.data.nick=== undefined){
+        that.opact("微信昵称不能为空");
+        return
+      }
       wx.request({
-          url: app.globalData.webroot + '/xcx/api/updateuser',
-          data: {
-        name: that.data.userdata.name,
-        phone: that.data.userdata.phone,
-        nick: that.data.userdata.nick,
+        url: app.globalData.webroot + '/xcx/api/updateuser',
+        data: {
+        name: that.data.name,
+        phone: that.data.phone,
+        nick: that.data.nick,
         type: '1',
         portrait: that.data.userdata.portrait,
         pid:1
-          },
-          method: 'post',
-          header: {
-            'content-type': 'application/json;charset=UTF-8',
-          },
-          success: function (res) {
+        },
+        method: 'post',
+        header: {
+          'content-type': 'application/json;charset=UTF-8',
+        },
+        success: function (res) {
             that.setData({
     //           hidden: true,
-              'userdata.name': that.data.userdata.name,
-              'userdata.phone': that.data.userdata.phone,
-              'userdata.nick': that.data.userdata.nick,
+              'userdata.name': that.data.name,
+              'userdata.phone': that.data.phone,
+              'userdata.nick': that.data.nick,
               'userdata.type': '1',
               'userdata.portrait': that.data.userdata.portrait,
               'userdata.pid': 1,
 
             });
-            // console.log('wxuserInfo', that.data.userdata);
             wx.setStorageSync('wxuserInfo', that.data.userdata)
-    
             if (that.data.userdata) {
               wx.navigateBack()
             } else {
@@ -154,7 +162,6 @@ Page({
                 url: '/pages/my/my/my'
               })
             }
-    
           },
           fail: function () {
             that.opact("操作失败，请稍后再试");}})}

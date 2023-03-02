@@ -21,6 +21,12 @@ Page({
         current:1,
         codeText:'',
         counting:false,
+        phone:'',//账号
+        yzm:'',//验证码
+        mima:'',//密码
+        yzmima:'',//验证密码
+        dlphone:'',//登录的手机号
+        dlmima:'',//登录的密码
     },
     // 登陆注册监听
     click(e){
@@ -108,7 +114,6 @@ Page({
           ctx.translate(-x, -y);
         }
         code = code_temp;
-        console.log(code)
         /**绘制干扰线**/
         for (var i = 0; i < 4; i++) {
           ctx.strokeStyle = that.randomColor(40, 180);
@@ -136,6 +141,123 @@ Page({
     var g = that.randomNum(min, max);
     var b = that.randomNum(min, max);
     return "rgb(" + r + "," + g + "," + b + ")";
+  },
+  /**
+   * 提示文字
+   */
+  opact: function (txt) {
+    wx.showToast({
+      title: txt,
+      mask: false,
+      icon: "none",
+      duration: 2000
+    });
+  },
+  // 登录与注册的方法
+  zhuce(){
+    var that = this;
+    //注册
+    if(this.data.current == '0'){
+      if (that.data.phone === '' || that.data.phone === null || that.data.phone === undefined) {
+        this.opact("账号不能为空！");
+        return
+      }
+//       if (that.data.phone.length !== 11) {
+//         this.opact("请输入正确的手机号！");
+//         return
+//       }
+      if (that.data.mima=== '' || that.data.mima=== null || that.data.mima=== undefined) {
+        this.opact("密码不能为空！");
+        return
+      }
+      if (that.data.yzmima=== '' || that.data.yzmima=== null || that.data.yzmima=== undefined) {
+        this.opact("确认密码不能为空！");
+        return
+      }
+      if(that.data.mima !== that.data.yzmima){
+        this.opact("两次输入的密码不一致，请重新输入！");
+        return
+      }
+      if(this.data.yzm !== code){
+        this.opact("验证码不正确，区分大小写！");
+        return
+      }
+      wx.request({
+          url: app.globalData.webroot + '/xcx/my/zhuce',
+          data: {
+            phone: that.data.phone,
+            mima: that.data.mima,
+          },
+          method: 'post',
+          header: {
+            'content-type': 'application/json;charset=UTF-8',
+          },
+          success: function (res) {
+            if(res.data.data.return == "true"){
+              that.setData({
+                "phone":"",
+                "yzm":"",
+                "mima":"",
+                "yzmima":"",
+                "current":"1"
+              })
+              that.opact("注册成功！");
+            }else{
+              that.opact("账号已存在，请重新输入！");
+            }
+           
+            
+            
+          },
+          fail: function () {
+             this.opact("操作失败，请稍后再试");
+          }
+      })
+    }else{//登录
+      if (that.data.dlphone === '' || that.data.dlphone === null || that.data.dlphone === undefined) {
+        this.opact("账号不能为空！");
+        return
+      }
+      if (that.data.dlmima=== '' || that.data.dlmima=== null || that.data.dlmima=== undefined) {
+        this.opact("密码不能为空！");
+        return
+      }
+      wx.request({
+        url: app.globalData.webroot + '/xcx/my/denglu',
+        data: {
+          phone: that.data.dlphone,
+          mima: that.data.dlmima,
+        },
+        method: 'post',
+        header: {
+          'content-type': 'application/json;charset=UTF-8',
+        },
+        success: function (res) {
+          if(res.data.data.return == "true"){
+            that.setData({
+              "dlphone":"",
+              "dlmima":"",  
+            })
+            that.opact("登录成功！");
+            //跳转到首页
+            wx.redirectTo({
+              url: '/pages/main/main'
+            })
+          }else if(res.data.data.return == "yhmbzc"){
+            that.opact("账号错误，请重新输入！");
+          }else if(res.data.data.return == "mmcw"){
+            that.opact("密码错误，请重新输入！");
+          }else{
+            that.opact("未知错误，请联系管理员！");
+          }
+          
+        },
+        fail: function () {
+           this.opact("操作失败，请稍后再试");
+        }
+    })
+    }
+    
   },
     /**
      * 生命周期函数--监听页面初次渲染完成

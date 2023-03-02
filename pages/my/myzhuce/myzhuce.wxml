@@ -13,19 +13,24 @@
      <view style="float: right;padding-left: 4vw;padding-right: 4vw;width: 92vw;font-size: 16px;font-weight: 400;margin-top:55vw;">
         <view >
           <view style="color: red;float: left;width: 3vw;">*</view>姓名
-          <input data-gater="userSetInfo.xm" maxlength="10" bindinput="inputFrame" value="{{userdata.name}}" type="text" style="float: right; text-align: right;width: 52vw;color: rgba(140, 137, 137, 1);" type="text"></input>
+          <input data-gater="userSetInfo.xm" maxlength="10" bindinput="inputFrame" model:value="{{name}}" type="text" style="float: right; text-align: right;width: 52vw;color: rgba(140, 137, 137, 1);" type="text"></input>
           <view class="link-top"></view>
         </view>
+        <!-- <view style="margin-top: 4vw; " >
+          <view style="color: red;float: left;width: 3vw;">*</view>微信昵称
+          <input data-gater="userSetInfo.phone" maxlength="11" model:value="{{nick}}" bindblur="sendPhone" bindinput="inputFrame"  type="text" style="float: right; text-align: right;width: 52vw;color: rgba(140, 137, 137, 1);"></input>
+          <view class="link-top"></view>
+        </view> -->
         <view style="margin-top: 4vw; " >
-          <view style="color: red;float: left;width: 3vw;"></view> 微信昵称
-          <p data-gater="userSetInfo.phone" maxlength="11"  bindblur="sendPhone" bindinput="inputFrame"  type="text" style="float: right; text-align: right;width: 52vw;color: rgba(140, 137, 137, 1);">{{userdata.nick}}</p>
+          <view style="color: red;float: left;width: 3vw;">*</view> 联系方式
+          <input data-gater="userSetInfo.phone" maxlength="11" model:value="{{phone}}" bindblur="sendPhone" bindinput="inputFrame"  type="number" style="float: right; text-align: right;width: 52vw;color: rgba(140, 137, 137, 1);"></input>
           <view class="link-top"></view>
         </view>
-        <view style="margin-top: 4vw; " >
-          <view style="color: red;float: left;width: 3vw;"></view> 联系方式
-          <p data-gater="userSetInfo.phone" maxlength="11"  bindblur="sendPhone" bindinput="inputFrame"  type="number" style="float: right; text-align: right;width: 52vw;color: rgba(140, 137, 137, 1);">{{userdata.phone}}</p>
+        <!-- <view style="margin-top: 4vw; " >
+          <view style="color: red;float: left;width: 3vw;">*</view> 密码
+          <input data-gater="userSetInfo.phone" maxlength="11" model:value="{{phone}}" bindblur="sendPhone" bindinput="inputFrame" password='true'  type="number" style="float: right; text-align: right;width: 52vw;color: rgba(140, 137, 137, 1);"></input>
           <view class="link-top"></view>
-        </view>
+        </view> -->
     </view>
   <view>
       <button style="font-size: 16px;font-weight: 400;background-color:#31525b;width: 92vw;line-height: 10vw;margin-right: 4vw;color: white;position: fixed;bottom: 4vw;left: 4vw;z-index: 9999;" bindtap="edituser">保存</button>

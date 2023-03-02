@@ -43,5 +43,6 @@
   },
   "sitemapLocation": "sitemap.json",
   "plugins": {},
-  "requiredPrivateInfos": []
+  "requiredPrivateInfos": [],
+  "entryPagePath": "pages/register/register"
 }

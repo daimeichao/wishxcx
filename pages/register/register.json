@@ -3,7 +3,7 @@
   "backgroundTextStyle": "light",
   "onReachBottomDistance": 50,
   "enablePullDownRefresh": false,
-  "navigationBarTitleText": "注册",
+  "navigationBarTitleText": "首页",
   "navigationBarTextStyle": "black",
   "navigationBarBackgroundColor": "#FFFFFF"
 }

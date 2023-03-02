@@ -130,7 +130,6 @@
   bottom: 0;
   height: 10vh;
   background-color:#FFF;
-  /* background-image: url(https://hxjtg.fzjiading.com/wxy-api/img/navnew.png); */
   background-position: center center;
   background-size: cover;
 }

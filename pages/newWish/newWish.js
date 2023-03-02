@@ -7,6 +7,7 @@ Page({
    */
   data: {
     userInfo:{},
+    userdata:{},//测试使用
     userName:'',
     content:'',
     adder:'',
@@ -34,7 +35,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getDetail()
   },
 
   /**
@@ -76,7 +77,32 @@ Page({
       this.setData(app.updParam(e))
     },
 
-
+    getDetail(){
+      var that =this 
+      // use api
+      wx.request({
+        url: app.globalData.webroot + 'xcx/api/getUserById', //上线的话必须是https，没有appId的本地请求貌似不受影响 
+        method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT 
+        header: {
+          "Content-Type": "application/json",
+        }, // 设置请求的 header
+        data: {
+          // pid:that.data.pid
+          pid:1
+        },
+        success: function (res) {
+          let result = res.data.data
+          if(result.resultCode ===2000){ // 成功
+            that.setData({
+           userdata:result.detail,
+           userName:result.detail.name
+            })
+          }else{ // 失败
+            app.toast(result.message)
+          }
+        },
+      })
+    },
 
     addWish(){
       var that =this 
@@ -84,12 +110,6 @@ Page({
         app.toast('请输入姓名')
         return 
       }
-
-      
-      // if(that.data.money === null ||that.data.money ==='' ){
-      //   app.toast('请输入您的许愿地点')
-      //   return 
-      // }
 
       if(that.data.adder === null ||that.data.adder ==='' ){
         app.toast('请输入您的许愿金额')
@@ -114,7 +134,8 @@ Page({
         }, // 设置请求的 header
         data: {
           wishusername:that.data.userName,
-          wishuserid:that.data.userInfo.pid,
+          // wishuserid:that.data.userInfo.pid,
+          wishuserid:1,
           wish_content:that.data.content,
           adder:that.data.adder,
           wish_audit_remark:'',

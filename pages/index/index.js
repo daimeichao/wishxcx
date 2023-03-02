@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+   qz:"http://localhost:8127/" ,
     bannerList:[],
     pageNo:1,
     pageSize:10,
@@ -88,9 +89,16 @@ Page({
         let data = res.data.data
         if(data.resultCode === 2000){
           let bannerList =  data.bannerLilst
+          // for (var i in bannerList) {
+          //   bannerList[i].url=that.data.qz+bannerList[i].url
+          //   console.log("bannerList加前缀",bannerList)
+          // }
+        
+          
           that.setData({
             bannerList:bannerList,
           })
+          
         }else{
 
         }

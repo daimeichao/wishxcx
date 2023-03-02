@@ -5,8 +5,8 @@
     <view style="width: 100vw;z-index: 1;height: 184px;background-color: #b3dee5;">
     </view> 
     <view style="margin-top: -40vw;margin-left: 5vw;">
-      <image src="/img/wy.png" style="width: 40vw;z-index: 2;" mode="widthFix"></image>
-     <view class="zt">我的完愿</view>
+      <image src="/img/sxyw.png" style="width: 40vw;z-index: 2;" mode="widthFix"></image>
+     <!-- <view class="zt">我的完愿</view> -->
       </view>
     </view>
 </view>

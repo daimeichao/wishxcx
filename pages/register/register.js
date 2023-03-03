@@ -210,7 +210,7 @@ Page({
             
           },
           fail: function () {
-             that.opact("操作失败，请稍后再试");
+             this.opact("操作失败，请稍后再试");
           }
       })
     }else{//登录
@@ -240,7 +240,7 @@ Page({
             })
             that.opact("登录成功！");
             wx.setStorageSync("userInfo", res.data.data.userinfo);
-            console.log("userinfo res",res.data.data.userinfo)
+            console.log("userinfo res",res)
             //跳转到首页
             wx.redirectTo({
               url: '/pages/main/main'
@@ -255,7 +255,7 @@ Page({
           
         },
         fail: function () {
-           that.opact("操作失败，请稍后再试");
+           this.opact("操作失败，请稍后再试");
         }
     })
     }

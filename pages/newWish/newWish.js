@@ -19,7 +19,7 @@ Page({
    */
   onLoad: function (options) {
     this.setData({ 
-      userInfo:wx.getStorageSync("userInfo")
+      userdata:wx.getStorageSync("userInfo")
     })
     console.log(this.data.userInfo)
   },
@@ -88,7 +88,7 @@ Page({
         }, // 设置请求的 header
         data: {
           // pid:that.data.pid
-          pid:1
+          pid:that.data.userdata.pid
         },
         success: function (res) {
           let result = res.data.data
@@ -135,7 +135,7 @@ Page({
         data: {
           wishusername:that.data.userName,
           // wishuserid:that.data.userInfo.pid,
-          wishuserid:1,
+          wishuserid:that.data.userdata.pid,
           wish_content:that.data.content,
           adder:that.data.adder,
           wish_audit_remark:'',

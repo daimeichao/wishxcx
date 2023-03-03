@@ -1,6 +1,7 @@
 const app = getApp();
 Page({
   data: {
+    userdata:{},
     list:[],
     pageNo:1,
     pageSize:10,
@@ -12,6 +13,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({ 
+      // pid:options.pid,
+      userdata:wx.getStorageSync("userInfo")
+    })
+
+    console.log("pid " + this.data.userdata)
 
   },
 
@@ -75,7 +82,7 @@ Page({
         "Content-Type": "application/json",
       }, // 设置请求的 header
       data: {
-        pid:1,
+        pid:that.data.userdata.pia,
         pageindex: 1,
         pagesize: that.data.pageSize,
       },

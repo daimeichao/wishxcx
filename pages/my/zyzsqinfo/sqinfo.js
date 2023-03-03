@@ -8,7 +8,7 @@ Page({
   data: {
     pid:1,
     detail:{},
-    userInfo:{}
+    userdata:{}
   },
 
   /**
@@ -17,10 +17,10 @@ Page({
   onLoad: function (options) {
     this.setData({ 
       // pid:options.pid,
-      userInfo:wx.getStorageSync("userInfo")
+      userdata:wx.getStorageSync("userInfo")
     })
 
-    console.log("pid " + this.data.pid)
+    console.log("pid " + this.userdata.pid)
   },
 
   /**
@@ -83,7 +83,7 @@ Page({
         "Content-Type": "application/json",
       }, // 设置请求的 header
       data: {
-        pid:that.data.pid
+        pid:that.data.userdata.pid
       },
       success: function (res) {
         let result = res.data.data

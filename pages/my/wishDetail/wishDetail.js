@@ -8,7 +8,7 @@ Page({
   data: {
     pid:"",
     detail:{},
-    userInfo:[]
+    userdata:[]
   },
 
   /**
@@ -21,7 +21,7 @@ Page({
       userdata: wxuserInfo,
       openid:wxuserInfo.openid
     })
-    this.getSelectData();
+    this.getDetail();
   }
   ,
 
@@ -73,28 +73,7 @@ Page({
   onShareAppMessage: function () {
 
   },
-  getSelectData: function () {
-    var that =this;
-    wx.request({
-      url: app.globalData.Jweb+'wish/my/info',
-      data: {
-        openid:that.data.openid
-      },
-      method: 'get',
-      header: {
-        'content-type': 'application/json;charset=UTF-8',
-      },
-      success: function (res) {
-        that.setData({
-          userdata:res.data.data.data[0],
-          //pid:res.data.data.data[0].pid
-        })
-      },
-      fail: function (e) {
-        that.opact("操作失败，请稍后再试");
-      }
-    });
-  },
+ 
 
   getDetail(){
     var that =this 
@@ -127,10 +106,6 @@ Page({
 
   toPage(e){
     var url = e.currentTarget.dataset.url
-    // if(this.data.userInfo.pid === this.data.detail.wishuserid){
-    //   app.toast("不能实现自己发布得愿望")
-    //   return 
-    // }
     wx.navigateTo({
       url: url
     })

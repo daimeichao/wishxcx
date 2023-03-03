@@ -121,7 +121,7 @@ console.log(that.data.zyzname);
         // zyzname:that.data.userInfo.name,
         zyzname:that.data.zyzname,
         // zyzid:that.data.userInfo.pid,
-        zyzid:1,
+        zyzid:that.data.userInfo.pid,
         sq_time:that.data.sqsj,
         reason:that.data.reason,
         zyz_audit_remark:''

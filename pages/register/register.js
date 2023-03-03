@@ -239,6 +239,8 @@ Page({
               "dlmima":"",  
             })
             that.opact("登录成功！");
+            wx.setStorageSync("userInfo", res.data.data.userinfo);
+            console.log("userinfo res",res.data.data.userinfo)
             //跳转到首页
             wx.redirectTo({
               url: '/pages/main/main'

@@ -8,7 +8,7 @@ Page({
   data: {
     pid:"",
     detail:{},
-    userInfo:{},
+    userdata:{},
     pic:[],
   },
 
@@ -85,7 +85,7 @@ Page({
         "Content-Type": "application/json",
       }, // 设置请求的 header
       data: {
-        pid:that.data.pid
+        pid:that.data.userdata.pid
       },
       success: function (res) {
         let result = res.data

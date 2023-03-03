@@ -7,8 +7,7 @@ Page({
    */
   data: {
     pid:1,
-   userdata:{},
-    userInfo:{},
+    userdata:{},
     nick:"",
     name:"",
     phone:""
@@ -20,10 +19,10 @@ Page({
   onLoad: function (options) {
     this.setData({ 
       // pid:options.pid,
-      userInfo:wx.getStorageSync("userInfo")
+      userdata:wx.getStorageSync("userInfo")
     })
 
-    console.log("pid " + this.data.userInfo)
+    console.log("pid " + this.data.userdata)
   },
 
   /**
@@ -86,7 +85,7 @@ Page({
         "Content-Type": "application/json",
       }, // 设置请求的 header
       data: {
-        pid:that.data.pid
+        pid:that.data.userdata.pid
         // pid:1
       },
       success: function (res) {
@@ -137,7 +136,7 @@ Page({
         nick: that.data.nick,
         type: '1',
         portrait: that.data.userdata.portrait,
-        pid:1
+        pid:that.data.userdata.pid
         },
         method: 'post',
         header: {
@@ -151,7 +150,7 @@ Page({
               'userdata.nick': that.data.nick,
               'userdata.type': '1',
               'userdata.portrait': that.data.userdata.portrait,
-              'userdata.pid': 1,
+              'userdata.pid': that.data.userdata.pid,
 
             });
             wx.setStorageSync('wxuserInfo', that.data.userdata)
@@ -166,16 +165,4 @@ Page({
           fail: function () {
             that.opact("操作失败，请稍后再试");}})}
 
-
-  // toPage(e){
-  //   var url = e.currentTarget.dataset.url
-  //   if(this.data.userInfo.pid === this.data.detail.wishuserid){
-  //     app.toast("不能实现自己发布得愿望")
-  //     return 
-  //   }
-  //   wx.navigateTo({
-  //     url: url
-  //   })
-    
-  // },
     })

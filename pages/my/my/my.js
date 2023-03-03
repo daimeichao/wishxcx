@@ -81,8 +81,8 @@ Page({
         "Content-Type": "application/json",
       }, // 设置请求的 header
       data: {
-        pid:that.data.pid
-        // pid:1
+        // pid:that.data.pid
+        pid:that.data.userdata.pid
       },
       success: function (res) {
         let result = res.data.data
@@ -104,32 +104,33 @@ Page({
       var id = e.currentTarget.dataset.id
       if(id==1){
         wx.navigateTo({
-          url: '/pages/my/mywish/mywish?pid=' + this.data.pid
+          // url: '/pages/my/mywish/mywish?pid=' + this.data.pid
+          url: '/pages/my/mywish/mywish?pid=' + this.data.userdata.pid
         })
       } 
       if(id==2){
         wx.navigateTo({
-          url: '/pages/my/myfulfill/myfulfill?pid=' + this.data.pid
+          url: '/pages/my/myfulfill/myfulfill?pid=' +  this.data.userdata.pid
         })
       }
       if(id==3){
         wx.navigateTo({
-          url: '/pages/my/myzhuce/myzhuce?pid=' + this.data.pid
+          url: '/pages/my/myzhuce/myzhuce?pid=' + this.data.userdata.pid
         })
       }
       if(id==4){
         wx.navigateTo({
-          url: '/pages/my/myjf/jfxq?pid=' + this.data.pid
+          url: '/pages/my/myjf/jfxq?pid=' +  this.data.userdata.pid
         })
       }
       if(id==5){
         wx.navigateTo({
-          url: '/pages/my/zyzsqinfo/sqinfo?pid=' + this.data.pid
+          url: '/pages/my/zyzsqinfo/sqinfo?pid=' +  this.data.userdata.pid
         })
       }
       if(id==6){
         wx.navigateTo({
-          url: '/pages/register/register?pid=' + this.data.pid
+          url: '/pages/register/register?pid=' +  this.data.userdata.pid
         })
       }
   },

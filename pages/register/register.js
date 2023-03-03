@@ -210,7 +210,7 @@ Page({
             
           },
           fail: function () {
-             this.opact("操作失败，请稍后再试");
+             that.opact("操作失败，请稍后再试");
           }
       })
     }else{//登录
@@ -255,7 +255,7 @@ Page({
           
         },
         fail: function () {
-           this.opact("操作失败，请稍后再试");
+           that.opact("操作失败，请稍后再试");
         }
     })
     }

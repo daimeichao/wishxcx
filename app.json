@@ -3,6 +3,7 @@
     "van-uploader": "/miniprogram_npm/@vant/weapp/uploader/index"
   },
   "pages": [
+    "pages/register/register",
     "pages/main/main",
     "pages/loading/loading",
     "pages/newWish/newWish",
@@ -25,8 +26,8 @@
     "pages/jfphb/jfphb",
     "pages/goods/goods",
     "pages/mygoods/mygoods",
-    "pages/gooddetail/gooddetail",
-    "pages/register/register"
+    "pages/gooddetail/gooddetail"
+  
   ],
   "window": {
     "backgroundTextStyle": "light",

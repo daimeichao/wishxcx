@@ -13,7 +13,7 @@
       <view class="mainWish">
         <view class="wishList">
       
-          <view  wx:if="{{item.show=='1'}}" wx:for="{{menulist}}" wx:key="id" style="" class="bgimage{{index % 6}}" bindtap="toPage"  data-url="{{item.path}}">
+          <view  wx:if="{{item.show=='1'}}" wx:for="{{menulist}}" wx:key="id" style="" class="bgimage{{index % 6}}" bindtap="toPage" id="{{item.id}}" data-url="{{item.path}}">
             <image src="{{item.img}}" style="height:10vh;width:10vh;margin-left:15vw ;margin-top:3vh;vertical-align: middle;border-radius:50%"></image> 
 
             <view class="userView">

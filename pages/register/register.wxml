@@ -16,7 +16,7 @@
   <view class="input-box" hidden="{{current==0}}">
     <view class="wei-input">
       <icon type="waiting" color="#fae6b1" size="16"></icon>
-      <input class="input" auto-focus maxlength="11" model:value="{{dlphone}}" placeholder="请输入账号"/>
+      <input class="input" auto-focus maxlength="20" model:value="{{dlphone}}" placeholder="请输入账号"/>
     </view>
     <view class="wei-input">
       <icon type="success" color="#fae6b1" size="16"></icon>

@@ -169,13 +169,37 @@ Page({
  
   toPage(e){
     var url = e.currentTarget.dataset.url
-  
-    wx.navigateTo({
-      url: url
-    })
+    let userInfo = wx.getStorageSync("userInfo");
+    if(e.currentTarget.id !== '4'){
+      wx.navigateTo({
+        url: url
+      })
+    }else if(userInfo.zyzzt === '0'){
+      wx.navigateTo({
+        url: url
+      })
+    }else{
+      if(userInfo.zyzzt === '1'){
+        this.opact("正在申请志愿者，请静候佳音！")
+      }else{
+        this.opact("您已经是名志愿者，无需再次申请！")
+      }
+      
+    }
+    
     
   },
-
+/**
+   * 提示文字
+   */
+  opact: function (txt) {
+    wx.showToast({
+      title: txt,
+      mask: false,
+      icon: "none",
+      duration: 2000
+    });
+  },
   toPageR(e){
     var url = e.currentTarget.dataset.url
     wx.redirectTo({

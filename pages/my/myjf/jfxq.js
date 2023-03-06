@@ -82,7 +82,7 @@ Page({
         "Content-Type": "application/json",
       }, // 设置请求的 header
       data: {
-        pid:that.data.userdata.pia,
+        pid:that.data.userdata.pid,
         pageindex: 1,
         pagesize: that.data.pageSize,
       },

@@ -1,9 +1,7 @@
 
 .mainView{
-  height: 100vh;
+  height: 100%;
   width: 100%;
-
-  background-image: url(https://hxjtg.fzjiading.com/wxy-api/img/wishbg.jpg);
   background-position: center center;
   background-size: cover;
 }

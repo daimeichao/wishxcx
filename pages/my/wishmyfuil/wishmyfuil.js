@@ -85,20 +85,21 @@ Page({
         "Content-Type": "application/json",
       }, // 设置请求的 header
       data: {
-        pid:that.data.userdata.pid
+        pid:that.data.pid
       },
       success: function (res) {
         let result = res.data
         console.log(result);
         if(result.status ==="success"){ // 成功
           var dds=result.data.data[0];
-          dds.wishTime= dds.wishTime.substr(0,10);
-          dds.sxtime= dds.sxtime.substr(0,10);
+          console.log(dds,"dds")
+          // dds.wishTime= dds.wishTime.substr(0,10);
+          // dds.sxtime= dds.sxtime.substr(0,10);
           that.setData({
             detail:dds,
             pic:result.data.data[0].url
           })
-          that.getUrl()
+          // that.getUrl()
         }else{ // 失败
           app.toast(result.message)
         }

@@ -233,6 +233,7 @@ Page({
           'content-type': 'application/json;charset=UTF-8',
         },
         success: function (res) {
+    console.log("userinfo res111111",res)
           if(res.data.data.return == "true"){
             that.setData({
               "dlphone":"",

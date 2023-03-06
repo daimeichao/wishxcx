@@ -1,5 +1,5 @@
 <view class="mainView">
-  <view style="padding-left:5vw;padding-top:10vw;position:relative">
+  <view style="padding-left:5vw;padding-top:10vw;position:relative;background-color: #b3dee5;">
 
   <image src="../../../img/ywqd.png" style="height:150rpx;width:300rpx;"></image>
   </view>
@@ -28,7 +28,7 @@
       <p style="margin-left:1vw;">许愿内容</p>
       </view>
       <view class="itemRight" style="text-align:left;vertical-align:top;line-height:6vw;padding-top:3vw;">
-      <p style="margin-left:1vw;word-wrap:break-word;word-break:break-all;overflow: hidden;">{{detail.wishContent}}</p>
+      <p style="margin-left:1vw;word-wrap:break-word;word-break:break-all;overflow: hidden;">{{detail.wish_content}}</p>
       </view>
 
 
@@ -51,28 +51,13 @@
    
     </view>
     <view style="height:1px;width:100%;background-color:rgba(245, 245, 245, 1)"></view>
-
-    <!-- <view class="viewItem"> 
-      <view class="itemLeft">
-      <image src="../../img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
-      <p style="margin-left:1vw;padding-top:10px">许愿金额</p>
-      </view>
-      <view class="itemRight">
-      <p style="margin-left:1vw;padding-top:10px">{{detail.wishusername}}</p>
-      </view>
-
-   
-    </view>
-    <view style="height:1px;width:100%;background-color:rgba(245, 245, 245, 1)"></view> -->
-
-
     <view class="viewItem"> 
       <view class="itemLeft">
       <image src="../../../img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
       <p style="margin-left:1vw;padding-top:10px">许愿时间</p>
       </view>
       <view class="itemRight">
-      <p style="margin-left:1vw;padding-top:10px">{{detail.wishTime}}</p>
+      <p style="margin-left:1vw;padding-top:10px">{{detail.wishtime}}</p>
       </view>
 
    

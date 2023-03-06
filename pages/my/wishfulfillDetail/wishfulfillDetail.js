@@ -113,7 +113,7 @@ Page({
       },
       success: function (res) {
         let result = res.data
-        console.log(result.data.data);
+        console.log(result.data.data,"111111wishr");
         if(result.status ==="success"){ // 成功
           var dds=result.data.data;
           dds.wishTime= dds.wishTime.substr(0,10);

@@ -64,12 +64,12 @@ Page({
         url: '/pages/my/wishDetail/wishDetail?pid='+pid
       })
     }
-    if(state == "20"){
+   else if(state == "20"){
       wx.navigateTo({ 
         url: '/pages/my/wishDetailEdit/wishDetailEdit?pid='+pid
       })
     }
-    if(state == "12"){
+   else if(state == "12"){
       wx.navigateTo({ 
         url: '/pages/my/wishmyfuil/wishmyfuil?pid='+pid
       })

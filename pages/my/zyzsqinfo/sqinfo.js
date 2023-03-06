@@ -20,7 +20,7 @@ Page({
       userdata:wx.getStorageSync("userInfo")
     })
 
-    console.log("pid " + this.userdata.pid)
+    console.log("pid " + this.data.userdata)
   },
 
   /**
@@ -91,6 +91,7 @@ Page({
           that.setData({
             detail:result.detail
           })
+        
         }else{ // 失败
           app.toast(result.message)
         }

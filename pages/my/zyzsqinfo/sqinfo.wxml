@@ -39,15 +39,8 @@
       <view class="itemRight" style="text-align:right;vertical-align:top;line-height:6vw;padding-top:3vw;">
       <p style="margin-left:1vw;word-wrap:break-word;word-break:break-all;overflow: hidden;">{{detail.sq_time}}</p>
       </view>
-
-
-
-      
-   
-    </view>
+     </view>
     <view style="height:1px;width:100%;background-color:rgba(245, 245, 245, 1)"></view>
-
-
     <view class="viewItem"> 
       <view class="itemLeft" style="vertical-align:top">
       <image src="../../../img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
@@ -61,7 +54,21 @@
     </view>
     <view style="height:1px;width:100%;background-color:rgba(245, 245, 245, 1)"></view>
 
-  
+    <view class="viewItem"> 
+      <view class="itemLeft" style="vertical-align:top">
+      <image src="../../../img/ring.png" style="height:20rpx;width:20rpx;vertical-align:middle;"></image>
+      <p style="margin-left:1vw;">申请状态</p>
+      </view>
+      <view  class="itemRight" style="text-align:right;vertical-align:top;line-height:6vw;padding-top:3vw;">
+      <!-- <p wx:if="{{detail.zyz_audit_state}}==0" style="margin-left:1vw;word-wrap:break-word;word-break:break-all;overflow: hidden;">待审核</p>
+      <p wx:if="{{detail.zyz_audit_state}}==1" style="margin-left:1vw;word-wrap:break-word;word-break:break-all;overflow: hidden;">审核通过</p>
+      <p wx:if="{{detail.zyz_audit_state}}==2" style="margin-left:1vw;word-wrap:break-word;word-break:break-all;overflow: hidden;">审核不通过</p> -->
+      <p style="margin-left:1vw;word-wrap:break-word;word-break:break-all;overflow: hidden;">{{detail.zyz_audit_state}}</p>
+      </view>
+
+   
+    </view>
+    <view style="height:1px;width:100%;background-color:rgba(245, 245, 245, 1)"></view>
   </view>
 
 

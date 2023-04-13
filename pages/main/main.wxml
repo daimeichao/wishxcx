@@ -1,10 +1,10 @@
 
 <view class="mainView">
    <view class="page-section page-section-spacing swiper">
-          <swiper indicator-dots="true" autoplay="true">
+          <swiper indicator-dots="true" autoplay="true"interval="4000" >
             <block wx:for="{{bannerList}}">
-              <swiper-item bindtap="toPage" data-url="/pages/newBannerDetail/newBannerDetail?url={{item.link}}&type={{item.type}}&pid={{item.pid}}">
-                <image style="width:100%;height:350%"  src="../../img/bj.jpg"></image>
+              <swiper-item style="background-color: white;height: 30vh;" bindtap="toPage" data-url="/pages/newBannerDetail/newBannerDetail?url={{item.link}}&type={{item.type}}&pid={{item.pid}}">
+                <image mode="aspectFill" style="height: 100%;width: 100%;" src="{{item.url}}"></image>
               </swiper-item>
             </block>
           </swiper>

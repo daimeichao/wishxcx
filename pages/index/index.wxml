@@ -1,15 +1,5 @@
 
  <view class="mainView">
-   <view class="page-section page-section-spacing swiper">
-          <swiper indicator-dots="true" autoplay="true">
-            <block wx:for="{{bannerList}}">
-              <swiper-item bindtap="toPage" data-url="/pages/newBannerDetail/newBannerDetail?url={{item.link}}&type={{item.type}}&pid={{item.pid}}">
-                <view style="width: 100vw;z-index: 1;height: 184px;background-color: #b3dee5;">
-    </view> 
-              </swiper-item>
-            </block>
-          </swiper>
-      </view>
 
       <view class="mainWish">
         <view class="wishList">

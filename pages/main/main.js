@@ -111,6 +111,10 @@ Page({
       success: function (res) {
         console.log(res.data.data)
         let data = res.data.data
+        for(let i = 0; i <data.bannerLilst.length ; i++)
+        {
+          data.bannerLilst[i].url='http://localhost:8097'+data.bannerLilst[i].url
+        }
         if(data.resultCode === 2000){
           let bannerList =  data.bannerLilst
           that.setData({

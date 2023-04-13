@@ -87,10 +87,26 @@ Page({
       },
       success: function (res) {
         let result = res.data.data
+        console.log("result",result)
         if(result.resultCode ===2000){ // 成功
+          if(result.detail.zyz_audit_state==='0'){
+            result.detail.zyz_audit_state='待审核'
+          }
+          else if(result.detail.zyz_audit_state==='1'){
+            result.detail.zyz_audit_state='审核通过'
+          }
+          else{
+            if(result.detail.zyz_audit_state==='2'){
+              result.detail.zyz_audit_state='审核不通过'
+            }
+            else{
+              result.detail.zyz_audit_state='暂无'
+            }
+          }
           that.setData({
             detail:result.detail
           })
+         
         
         }else{ // 失败
           app.toast(result.message)

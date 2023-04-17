@@ -5,6 +5,8 @@
     </view> 
     <view class="w100 topchild" >
       <image  src="{{userdata.portrait}}" style="width: 63px;height: 63px;border-radius: 50%;overflow: hidden;" mode="widthFix" mode="widthFix"></image>
+      <view class="fontw500"  style="margin:0 auto;font-size: 16px;color: white;margin-top: 2vw;z-index: 9999;">{{userdata.nick}}
+      </view>
      </view>
   </view>
 

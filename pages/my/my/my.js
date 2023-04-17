@@ -86,6 +86,7 @@ Page({
       },
       success: function (res) {
         let result = res.data.data
+        result.detail.portrait=app.globalData.webroot +result.detail.portrait
         if(result.resultCode ===2000){ // 成功
           that.setData({
          userdata:result.detail

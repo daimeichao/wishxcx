@@ -87,6 +87,7 @@ Page({
       },
       success: function (res) {
         let result = res.data.data
+        result.detail.tx=app.globalData.webroot +result.detail.tx
         console.log("result",result)
         if(result.resultCode ===2000){ // 成功
           if(result.detail.zyz_audit_state==='0'){

@@ -99,6 +99,7 @@ Page({
       },
       success: function (res) {
         let result = res.data.data
+        result.detail.url=app.globalData.webroot+result.detail.url
         if(result.resultCode ===2000){ // 成功
           that.setData({
             map:result.detail,

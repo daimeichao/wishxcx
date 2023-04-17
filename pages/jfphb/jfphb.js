@@ -80,6 +80,10 @@ Page({
       },
       success: function (res) {
         let result = res.data.data
+        for(let i = 0; i <result.wishList.length ; i++)
+        {
+          result.wishList[i].portrait=app.globalData.webroot + result.wishList[i].portrait
+        }
         if(result.resultCode == 2000){ // 成功
           let resultList =  result.wishList
           that.setData({

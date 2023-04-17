@@ -6,7 +6,18 @@
   .banner {
 	height: 300px;
   }
-  
+  .btnView{
+    width: 90%;
+    margin-left: 5%;  
+    background-color:#5ebec5;
+    /* background: linear-gradient(90deg, rgba(251, 93, 43, 1) 0%, rgba(253, 150, 86, 1) 100%); */
+    line-height: 13vw;
+    color: #FFF;
+    text-align: center;
+    border-radius: 10vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    } 
   .slide-image {
 	width: 100%;
 	height: 100%;
